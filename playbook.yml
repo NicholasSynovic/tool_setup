@@ -1,0 +1,7 @@
+---
+  - name: "Setup Linux"
+    hosts: [localhost]
+    connection: local
+
+    tasks:
+      - import_tasks: tasks/initial/variables.yml
