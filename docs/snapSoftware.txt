@@ -1,0 +1,11 @@
+Name                       Version           Rev    Tracking         Publisher    Notes
+bare                       1.0               5      latest/stable    canonical**  base
+core20                     20230801          2015   latest/stable    canonical**  base
+core22                     20230801          864    latest/stable    canonical**  base
+firefox                    119.0.1-1         3358   latest/stable/…  mozilla**    -
+gnome-3-38-2004            0+git.efb213a     143    latest/stable/…  canonical**  -
+gnome-42-2204              0+git.ff35a85     141    latest/stable/…  canonical**  -
+gtk-common-themes          0.1-81-g442e511   1535   latest/stable/…  canonical**  -
+snap-store                 41.3-71-g709398e  959    latest/stable/…  canonical**  -
+snapd                      2.60.4            20290  latest/stable    canonical**  snapd
+snapd-desktop-integration  0.9               83     latest/stable/…  canonical**  -
