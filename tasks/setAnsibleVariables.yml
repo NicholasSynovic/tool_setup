@@ -1,0 +1,5 @@
+# Set variables to be referenced within Ansible tasks
+
+- name: "Get current username"
+  command: whoami
+  register: currentUser

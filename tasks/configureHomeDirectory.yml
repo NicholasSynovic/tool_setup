@@ -1,0 +1,24 @@
+# Task to configure the home directory of a user with both general directories
+# and software specific dot (.) folders
+
+- name: "Create general directories"
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ currentUser.stdout }}/.config"
+    - "/home/{{ currentUser.stdout }}/.trash"
+    - "/home/{{ currentUser.stdout }}/Documents"
+    - "/home/{{ currentUser.stdout }}/Downloads"
+
+- name: "Create project/{org} directories"
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ currentUser.stdout }}/Documents/projects"
+    - "/home/{{ currentUser.stdout }}/Documents/projects/intel"
+    - "/home/{{ currentUser.stdout }}/Documents/projects/personal"
+    - "/home/{{ currentUser.stdout }}/Documents/projects/purdue"
+    - "/home/{{ currentUser.stdout }}/Documents/projects/scratch"
+    - "/home/{{ currentUser.stdout }}/Documents/projects/ssl"
