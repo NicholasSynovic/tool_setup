@@ -1,4 +1,4 @@
-CORE_PACKAGES = gcc make perl git curl
+CORE_PACKAGES = gcc make perl git curl ca-certificates gnupg
 
 updateSystem:
 	apt update
