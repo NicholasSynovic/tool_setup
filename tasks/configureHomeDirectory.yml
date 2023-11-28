@@ -11,6 +11,14 @@
     - "/home/{{ currentUser.stdout }}/Documents"
     - "/home/{{ currentUser.stdout }}/Downloads"
 
+- name: "Create userspecific bin directories"
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ currentUser.stdout }}/.local"
+    - "/home/{{ currentUser.stdout }}/.local/bin"
+
 - name: "Create project/{org} directories"
   file:
     path: "{{ item }}"
