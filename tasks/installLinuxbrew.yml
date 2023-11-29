@@ -1,0 +1,14 @@
+# Playbook to install Linuxbrew
+
+- name: "Download Linuxbrew installer"
+  become: false
+  get_url:
+    dest: "/home/{{ currentUser.stdout }}/.temp/linuxbrewInstaller.sh"
+    mode: "+x"
+    url: "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+
+- name: "Install Linuxbrew"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp"
+    cmd: "NONINTERACTIVE=1 ./linuxbrewInstaller.sh"
