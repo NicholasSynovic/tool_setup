@@ -1,0 +1,23 @@
+# NOTE: Paths are relative to the "playbook.yml" file
+
+aptSoftware:
+  - build-essential
+  - ca-certificates
+  - curl
+  - file
+  - gcc
+  - git
+  - gnupg
+  - gzip
+  - make
+  - perl
+  - pkg-config
+  - procps
+  - qemu-system
+  - qemu-user-static
+  - tar
+  - texlive-extra-utils
+  - texlive-fonts-recommended
+  - texlive-latex-base
+  - texlive-latex-extra
+  - texlive-xetex
