@@ -2,6 +2,7 @@
 # and software specific dot (.) folders
 
 - name: "Create general directories"
+  become: false
   file:
     path: "{{ item }}"
     state: directory
@@ -12,6 +13,7 @@
     - "/home/{{ currentUser.stdout }}/Downloads"
 
 - name: "Create userspecific bin directories"
+  become: false
   file:
     path: "{{ item }}"
     state: directory
@@ -20,6 +22,7 @@
     - "/home/{{ currentUser.stdout }}/.local/bin"
 
 - name: "Create project/{org} directories"
+  become: false
   file:
     path: "{{ item }}"
     state: directory
