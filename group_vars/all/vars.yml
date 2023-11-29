@@ -9,7 +9,11 @@ aptSoftware:
   - git
   - gnupg
   - gzip
+  - lynx
   - make
+  - nano
+  - nvm
+  - pigz
   - perl
   - pkg-config
   - procps
@@ -21,3 +25,27 @@ aptSoftware:
   - texlive-latex-base
   - texlive-latex-extra
   - texlive-xetex
+  - vim
+
+brewSoftware:
+  - astyle
+  - cloc
+  - cmake
+  - cvs
+  - deno
+  - brew install elvish
+  - fish
+  - hugo
+  - jq
+  - lynis
+  - mercurial
+  - neovim
+  - pre-commit
+  - pyenv
+  - rbenv
+  - ruby-build
+  - scc
+  - tmux
+  - zsh
+
+
