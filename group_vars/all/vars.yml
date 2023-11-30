@@ -9,6 +9,7 @@ aptSoftware:
   - gcc
   - gfortran
   - git
+  - gnucobol
   - gnupg
   - guix
   - gzip
@@ -63,6 +64,7 @@ brewSoftware:
   - pre-commit
   - pyenv
   - python@3.10
+  - python@3.11
   - rbenv
   - ruby-build
   - scc
