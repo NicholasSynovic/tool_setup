@@ -5,7 +5,17 @@
   get_url:
     dest: "/home/{{ currentUser.stdout }}/.temp/packages-microsoft-prod.deb"
     url: "https://packages.microsoft.com/config/ubuntu/{{ osVersion.stdout }}/packages-microsoft-prod.deb"
-  
+
+- name: "Download and install Intel keyring"
+  become: true
+  shell:
+    cmd: "wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB | gpg --dearmor | sudo tee /usr/share/keyrings/oneapi-archive-keyring.gpg > /dev/null"
+
+- name: "Add Intel APT repository"
+  become: true
+  shell:
+    cmd: "echo 'deb [signed-by=/usr/share/keyrings/oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main' | sudo tee /etc/apt/sources.list.d/oneAPI.list"
+
 - name: "Install Microsoft signing key + repository"
   become: true
   apt:
@@ -14,6 +24,10 @@
 - name: "Add SWI-Prolog PPA"
   apt_repository:
     repo: "ppa:swi-prolog/stable"
+
+- name: "Add Racket PPA"
+  apt_repository:
+    repo: "ppa:plt/racket"
 
 - name: "Upgrade Packages"
   become: true
