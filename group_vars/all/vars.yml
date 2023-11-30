@@ -8,6 +8,7 @@ aptSoftware:
   - gcc
   - git
   - gnupg
+  - guix
   - gzip
   - lynx
   - make
@@ -33,7 +34,7 @@ brewSoftware:
   - cmake
   - cvs
   - deno
-  - brew install elvish
+  - elvish
   - fish
   - hugo
   - jq
@@ -42,10 +43,57 @@ brewSoftware:
   - neovim
   - pre-commit
   - pyenv
+  - python@3.10
   - rbenv
   - ruby-build
   - scc
   - tmux
   - zsh
 
+guixSoftware:
+  - aspell
+  - bash
+  - bazaar
+  - bc
+  - binutils
+  - cflow
+  - chess
+  - clisp
+  - coreutils
+  - cssc
+  - diffutils
+  - fdisk
+  - findutils
+  - gawk
+  - gcc
+  - gcl
+  - gdb
+  - gforth
+  - ghostscript
+  - gnucobol
+  - gnupg
+  - gprolog
+  - grep
+  - guile
+  - gzip
+  - inetutils
+  - less
+  - make
+  - mes
+  - mit-scheme
+  - nano
+  - octave
+  - parallel
+  - patch
+  - rcs
+  - recutils
+  - scm
+  - screen
+  - sed
+  - smalltalk
+  - tar
+  - time
+  - units
+  - wget
+  - which
 
