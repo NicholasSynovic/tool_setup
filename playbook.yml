@@ -6,8 +6,9 @@
     tasks:
       - import_tasks: tasks/setAnsibleVariables.yml
       - import_tasks: tasks/configureHomeDirectory.yml
-      - import_tasks: tasks/installV.yml
-        #- import_tasks: tasks/installBitkeeper.yml
+      - import_tasks: tasks/installTCC.yml
+        # - import_tasks: tasks/installV.yml
+        # - import_tasks: tasks/installBitkeeper.yml
         # - import_tasks: tasks/installRustup.yml
         # - import_tasks: tasks/installElm.yml
         # - import_tasks: tasks/installSDKMan.yml
