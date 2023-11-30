@@ -12,6 +12,7 @@ aptSoftware:
   - gnupg
   - guix
   - gzip
+  - libapache2-svn
   - lynx
   - make
   - nvm
@@ -25,6 +26,7 @@ aptSoftware:
   - snapd
   - software-properties-common
   - sqlite3
+  - subversion
   - tar
   - texlive-extra-utils
   - texlive-fonts-recommended

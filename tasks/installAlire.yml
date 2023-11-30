@@ -1,0 +1,15 @@
+
+# Install Alire (Ada package manager)
+
+- name: "Download Alire"
+  become: false
+  get_url:
+    dest: "/home/{{ currentUser.stdout }}/.temp/alire.zip"
+    url: "https://github.com/alire-project/alire/releases/download/v1.2.2/alr-1.2.2-bin-x86_64-linux.zip"
+
+- name: "Decompress Alire"
+  become: false
+  unarchive:
+    copy: false
+    dest: "/home/{{ currentUser.stdout }}/.local"
+    src: "/home/{{ currentUser.stdout }}/.temp/alire.zip"

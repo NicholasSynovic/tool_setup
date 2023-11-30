@@ -6,7 +6,8 @@
     tasks:
       - import_tasks: tasks/setAnsibleVariables.yml
       - import_tasks: tasks/configureHomeDirectory.yml
-      - import_tasks: tasks/installTCC.yml
+      - import_tasks: tasks/installAlire.yml
+        # - import_tasks: tasks/installTCC.yml
         # - import_tasks: tasks/installV.yml
         # - import_tasks: tasks/installBitkeeper.yml
         # - import_tasks: tasks/installRustup.yml
