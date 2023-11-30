@@ -18,4 +18,4 @@ installAnsible:
 	/usr/bin/python3 -m ansible galaxy collection install community.general --force
 
 runAnsible:
-	/usr/bin/python3 -m ansible playbook playbook.yml --ask-become-pass
+	/usr/bin/python3 -m ansible playbook minimalConfiguration.yml
