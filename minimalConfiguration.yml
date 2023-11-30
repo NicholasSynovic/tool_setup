@@ -1,0 +1,8 @@
+---
+  - name: "Setup Minimal Configuration"
+    hosts: [localhost]
+    connection: local
+
+    tasks:
+      - import_tasks: tasks/setAnsibleVariables.yml
+      - import_tasks: tasks/configureHomeDirectory.yml
