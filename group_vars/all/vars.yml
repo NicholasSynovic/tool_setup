@@ -48,6 +48,7 @@ brewSoftware:
   - hunspell
   - jq
   - juliaup
+  - llvm
   - luaver
   - lynis
   - mercurial
