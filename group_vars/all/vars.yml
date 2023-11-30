@@ -3,6 +3,7 @@
 aptSoftware:
   - build-essential
   - ca-certificates
+  - coreutils
   - curl
   - file
   - gcc
