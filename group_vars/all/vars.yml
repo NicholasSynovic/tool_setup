@@ -13,7 +13,6 @@ aptSoftware:
   - gzip
   - lynx
   - make
-  - nano
   - nvm
   - pigz
   - perl
@@ -21,6 +20,7 @@ aptSoftware:
   - procps
   - qemu-system
   - qemu-user-static
+  - sed
   - snapd
   - software-properties-common
   - sqlite3
@@ -30,7 +30,8 @@ aptSoftware:
   - texlive-latex-base
   - texlive-latex-extra
   - texlive-xetex
-  - vim
+  - unzip
+  - zip
 
 brewSoftware:
   - astyle
@@ -61,6 +62,7 @@ brewSoftware:
   - ruby-build
   - scc
   - tmux
+  - vim
   - zsh
 
 guixSoftware:
