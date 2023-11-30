@@ -1,0 +1,35 @@
+---
+  - name: "Install APT Software"
+    hosts: [localhost]
+    connection: local
+
+    tasks:
+      - import_tasks: tasks/setAnsibleVariables.yml
+      - import_tasks: tasks/configureAPT.yml
+
+      - name: "Install APT software"
+        become: true
+        apt:
+          name: "{{ aptSoftware }}"
+    
+      - name: "Install software from Racket APT repository"
+        become: true
+        apt:
+          name: "{{ racketAPTRepoSoftware }}"
+
+      - name: "Install software from SWI-Prolog APT repository"
+        become: true
+        apt:
+          name: "{{ swiAPTRepoSoftware }}"
+
+      - name: "Install software from Microsoft APT repository"
+        become: true
+        apt:
+          name: "{{ microsoftAPTRepoSoftware }}"
+      
+      - name: "Install software from Intel APT repository"
+        become: true
+        apt:
+          name: "{{ intelAPTRepoSoftware }}"
+
+
