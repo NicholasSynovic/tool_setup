@@ -11,6 +11,10 @@
   apt:
     deb: "/home/{{ currentUser.stdout }}/.temp/packages-microsoft-prod.deb"
 
+- name: "Add SWI-Prolog PPA"
+  apt_repository:
+    repo: "ppa:swi-prolog/stable"
+
 - name: "Upgrade Packages"
   become: true
   apt:
