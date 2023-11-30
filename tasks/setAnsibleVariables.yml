@@ -5,5 +5,5 @@
   register: currentUser
 
 - name: "Get Ubuntu version"
-  command: if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi
+  command: 'lsb_release -r -s'
   register: osVersion

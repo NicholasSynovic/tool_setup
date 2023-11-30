@@ -6,6 +6,7 @@
     tasks:
       - import_tasks: tasks/setAnsibleVariables.yml
       - import_tasks: tasks/configureHomeDirectory.yml
+      - import_tasks: tasks/installFossil.yml
         # - import_tasks: tasks/installLinuxbrew.yml
         # - import_tasks: tasks/configureAPT.yml
         # - import_tasks: tasks/installFreeBasicCompiler.yml
