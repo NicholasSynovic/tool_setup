@@ -1,12 +1,11 @@
-# NOTE: Paths are relative to the "playbook.yml" file
-
 aptSoftware:
+  - apt-transport-https
   - build-essential
   - ca-certificates
   - coreutils
   - curl
-  - dotnet-sdk-8.0
   - file
+  - flatpak
   - gcc
   - git
   - gnupg
@@ -22,6 +21,9 @@ aptSoftware:
   - procps
   - qemu-system
   - qemu-user-static
+  - snapd
+  - software-properties-common
+  - sqlite3
   - tar
   - texlive-extra-utils
   - texlive-fonts-recommended
@@ -40,9 +42,13 @@ brewSoftware:
   - fish
   - fossil
   - gh
+  - ghcup
+  - golang
   - hugo
   - hunspell
   - jq
+  - juliaup
+  - luaver
   - lynis
   - mercurial
   - neovim
@@ -103,3 +109,9 @@ guixSoftware:
   - wget
   - which
 
+microsoftAPTRepoSoftware:
+  - dotnet-sdk-8.0
+  - powershell
+
+swiAPTRepoSoftware:
+  - swi-prolog
