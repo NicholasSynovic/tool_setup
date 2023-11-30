@@ -1,0 +1,14 @@
+# Playbook to install rustup 
+
+- name: "Download rustup installer"
+  become: false
+  get_url:
+    dest: "/home/{{ currentUser.stdout }}/.temp/rustupInstaller.sh"
+    mode: "+x"
+    url: "https://sh.rustup.rs"
+
+- name: "Install rustup"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp"
+    cmd: "./rustupInstaller.sh -y --no-modify-path"
