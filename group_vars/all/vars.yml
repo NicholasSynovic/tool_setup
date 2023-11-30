@@ -5,6 +5,7 @@ aptSoftware:
   - ca-certificates
   - coreutils
   - curl
+  - dotnet-sdk-8.0
   - file
   - gcc
   - git
