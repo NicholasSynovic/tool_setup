@@ -1,5 +1,16 @@
 # Task to configure repos, update, upgrade, and autoremove software with APT 
 
+- name: "Download Microsoft signing key + repository"
+  become: false
+  get_url:
+    dest: "/home/{{ currentUser.stdout }}/.temp/packages-microsoft-prod.deb"
+    url: "https://packages.microsoft.com/config/ubuntu/{{ osVersion.stdout }}/packages-microsoft-prod.deb"
+  
+- name: "Install Microsoft signing key + repository"
+  become: true
+  apt:
+    deb: "/home/{{ currentUser.stdout }}/.temp/packages-microsoft-prod.deb"
+
 - name: "Upgrade Packages"
   become: true
   apt:
