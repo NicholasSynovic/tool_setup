@@ -38,11 +38,15 @@ brewSoftware:
   - deno
   - elvish
   - fish
+  - fossil
+  - gh
   - hugo
+  - hunspell
   - jq
   - lynis
   - mercurial
   - neovim
+  - pandoc
   - pre-commit
   - pyenv
   - python@3.10
