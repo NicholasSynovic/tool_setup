@@ -65,6 +65,7 @@ brewSoftware:
   - scc
   - tmux
   - vim
+  - zig
   - zsh
 
 guixSoftware:
