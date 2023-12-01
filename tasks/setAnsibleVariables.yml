@@ -7,3 +7,8 @@
 - name: "Get Ubuntu version"
   command: 'lsb_release -r -s'
   register: osVersion
+
+- name: "Set Linuxbrew directory"
+  stat:
+    path: "/home/linuxbrew/.linuxbrew"
+  register: linuxbrewDir
