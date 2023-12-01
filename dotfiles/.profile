@@ -38,7 +38,7 @@ fi
 
 # If nvm is installed, source nvm config auto-completion
 if [ -d "$LINUXBREW_DIR/opt/nvm" ]; then
-    . "$LINUXBREW_DIR/opt/nvm.nvm.sh"
+    . "$LINUXBREW_DIR/opt/nvm/nvm.sh"
     . "$LINUXBREW_DIR/opt/nvm/etc/bash_completion.d/nvm"
     export NVM_DIR="$HOME/.nvm"
 fi
