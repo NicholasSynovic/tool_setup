@@ -29,6 +29,7 @@ fi
 if [ -s "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
     export LINUXBREW_DIR="/home/linuxbrew/.linuxbrew"
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # If Guix is installed, source ~/.guix-profile
 if [ -f "$HOME/.guix-profile" ]; then
