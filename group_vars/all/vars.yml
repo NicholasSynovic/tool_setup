@@ -13,10 +13,8 @@ aptSoftware:
   - gnupg
   - guix
   - gzip
-  - libapache2-svn
   - lynx
   - make
-  - nvm
   - pigz
   - perl
   - pkg-config
@@ -60,6 +58,7 @@ brewSoftware:
   - lynis
   - mercurial
   - neovim
+  - nvm
   - pandoc
   - pre-commit
   - pyenv
@@ -122,8 +121,8 @@ guixSoftware:
   - wget
   - which
 
-intelAPIRepoSoftware:
-  intel-oneapi-runtime-libs
+intelAPTRepoSoftware:
+  intel-aikit
   intel-basekit
   intel-hpckit
 

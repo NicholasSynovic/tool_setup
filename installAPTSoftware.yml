@@ -29,7 +29,9 @@
       
       - name: "Install software from Intel APT repository"
         become: true
-        apt:
-          name: "{{ intelAPTRepoSoftware }}"
+        shell:
+          cmd: "apt install intel-aikit intel-basekit intel-hpckit -y"
+        # apt:
+          # name: "{{ intelAPTRepoSoftware }}"
 
 

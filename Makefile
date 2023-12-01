@@ -1,13 +1,4 @@
-CORE_PACKAGES = gcc make perl git curl ca-certificates gnupg
-
-updateSystem:
-	apt update
-	apt upgrade -y
-	apt autoremove --purge -y
-	snap refresh
-
-installCoreSoftware:
-	apt install -y $(CORE_PACKAGES)
+CORE_PACKAGES = gcc make perl git curl ca-certificates gnupg snapd
 
 installAnsible:
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -17,5 +8,15 @@ installAnsible:
 	/usr/bin/python3 -m pip install --user ansible
 	/usr/bin/python3 -m ansible galaxy collection install community.general --force
 
+installCoreSoftware:
+	sudo apt install -y $(CORE_PACKAGES)
+
+updateSystem:
+	sudo apt update
+	sudo apt upgrade -y
+	sudo apt autoremove --purge -y
+	sudo snap refresh
+
 runAnsible:
-	/usr/bin/python3 -m ansible playbook minimalConfiguration.yml
+	ansible-playbook minimalConfiguration.yml
+	ansible-playbook installAPTSoftware.yml --ask-become-pass

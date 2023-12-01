@@ -22,10 +22,12 @@
     deb: "/home/{{ currentUser.stdout }}/.temp/packages-microsoft-prod.deb"
 
 - name: "Add SWI-Prolog PPA"
+  become: true
   apt_repository:
     repo: "ppa:swi-prolog/stable"
 
 - name: "Add Racket PPA"
+  become: true
   apt_repository:
     repo: "ppa:plt/racket"
 
