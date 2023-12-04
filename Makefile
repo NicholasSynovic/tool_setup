@@ -20,3 +20,4 @@ updateSystem:
 runAnsible:
 	ansible-playbook minimalConfiguration.yml
 	ansible-playbook installAPTSoftware.yml --ask-become-pass
+	ansible-playbook installLinuxbrewSowftware.yml
