@@ -114,7 +114,7 @@ guixSoftware:
   - scm
   - screen
   - sed
-  - smalltalk
+    #  - smalltalk
   - tar
   - time
   - units
