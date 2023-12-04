@@ -13,3 +13,8 @@ if [ -d "/usr/local/cuda*/bin" ]; then
     PATH="/usr/local/cuda*/bin:$PATH"
     LD_LIBRARY_PATH="/usr/local/cuda-12.2/lib64:$LD_LIBRARY_PATH"
 fi
+
+# If choosenim is installed, add to PATH
+if [ -d "$HOME/.nimble" ] ; then
+    PATH="$HOME/.nimble/bin:$PATH"
+fi
