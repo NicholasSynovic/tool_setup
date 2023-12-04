@@ -11,7 +11,7 @@
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}/.temp"
-    cmd: "gunzip elm.gz"
+    cmd: "gunzip elm.gz -f"
 
 - name: "Install Elm compiler"
   become: false
