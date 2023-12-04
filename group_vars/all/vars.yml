@@ -41,6 +41,7 @@ brewSoftware:
   - astyle
   - cloc
   - cmake
+  - crystal-lang
   - cvs
   - deno
   - elvish
@@ -81,7 +82,6 @@ guixSoftware:
   - cflow
   - chess
   - clisp
-  - crystal
   - coreutils
   - cssc
   - diffutils
