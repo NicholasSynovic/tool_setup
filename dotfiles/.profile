@@ -49,7 +49,9 @@ if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
     . "$SDKMAN_DIR/bin/sdkman/sdkman-init.sh"
 fi
 
-# If Intel oneAPI installed, source /opt/intel/oneapi/setvars.sh
-if [ -f "/opt/intel/oneapi/setvars.sh" ]; then
-. "/opt/intel/oneapi/setvars.sh"
+# If shell is non-login interactive and if Intel oneAPI installed, source /opt/intel/oneapi/setvars.sh
+if [[ $- == *i* ]]; then 
+    if [ -f "/opt/intel/oneapi/setvars.sh" ]; then
+        . "/opt/intel/oneapi/setvars.sh"
+    fi
 fi
