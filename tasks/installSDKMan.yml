@@ -11,4 +11,4 @@
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}/.temp"
-    cmd: "SDKMAN_DIR='/home/{{ currentUser.stdout }}/.local/.sdkman' ./sdkmanInstaller.bash"
+    cmd: "SDKMAN_DIR='/home/{{ currentUser.stdout }}/.local/bin/sdkman' ./sdkmanInstaller.bash"

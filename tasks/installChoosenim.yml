@@ -12,5 +12,4 @@
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}/.temp"
-    cmd: "./choosenim.sh -y && mv choosenim.sh /home/{{ currentUser.stdout }}/.local/bin/choosenim"
-
+    cmd: "./choosenim.sh -y"

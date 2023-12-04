@@ -12,3 +12,38 @@
   stat:
     path: "/home/linuxbrew/.linuxbrew"
   register: linuxbrewDir
+
+- name: "Set Alire executable"
+  stat:
+    path: "/home/{{ currentUser }}/.local/bin/alr"
+  register: alireExecutable
+
+- name: "Set Choosenim directory"
+  stat:
+    path: "/home/linuxbrew/.choosenim"
+  register: choosenimDir
+
+- name: "Set Alire executable"
+  stat:
+    path: "/home/{{ currentUser }}/.local/bin/elm"
+  register: elmExecutable
+
+- name: "Set Free Basic Compiler executable"
+  stat:
+    path: "/home/{{ currentUser }}/.local/bin/fbc"
+  register: fbcExecutable
+
+- name: "Set r-rig executable"
+  stat:
+    path: "/home/{{ currentUser }}/.local/bin/rig"
+  register: fbcExecutable
+
+- name: "Set rustup directory"
+  stat:
+    path: "/home/{{ currentUser }}.local/bin/rustup"
+  register: rustupDir
+
+- name: "Set SDKMan directory"
+  stat:
+    path: "/home/{{ currentUser }}.local/bin/sdkman"
+  register: sdkmanDir

@@ -19,6 +19,7 @@ updateSystem:
 
 runAnsible:
 	ansible-playbook minimalConfiguration.yml
-	ansible-playbook installAPTSoftware.yml --ask-become-pass
-	ansible-playbook installLinuxbrewSoftware.yml
-	ansible-playbook installGuixSoftware.yml
+#	ansible-playbook installAPTSoftware.yml --ask-become-pass
+#	ansible-playbook installLinuxbrewSoftware.yml
+#	ansible-playbook installGuixSoftware.yml
+	ansible-playbook buildSoftware.yml
