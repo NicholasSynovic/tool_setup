@@ -1,26 +1,54 @@
 aptSoftware:
   - apt-transport-https
+  - aspell
+  - bash
+  - bazaar
+  - bc
+  - binutils
   - build-essential
   - ca-certificates
+  - cflow
+  - clisp
   - coreutils
+  - cssc
   - curl
+  - diffutils
+  - fdisk
   - file
+  - findutils
   - flatpak
+  - gawk
   - gcc
+  - gcl
+  - gdb
+  - gforth
   - gfortran
+  - ghostscript
   - git
   - gnucobol
   - gnupg
-#  - guix
+  - gprolog
+  - grep
   - gzip
+  - less
   - lynx
   - make
-  - pigz
+  - mes
+  - mit-scheme
+  - nano
+  - octave
+  - patch
   - perl
+  - pigz
   - pkg-config
   - procps
   - qemu-system
   - qemu-user-static
+  - rcs
+  - recutils
+  - sbcl
+  - scm
+  - screen
   - sed
   - snapd
   - software-properties-common
@@ -32,6 +60,8 @@ aptSoftware:
   - texlive-latex-base
   - texlive-latex-extra
   - texlive-xetex
+  - time
+  - units
   - unzip
   - wget
   - zip
@@ -61,6 +91,7 @@ brewSoftware:
   - neovim
   - nvm
   - pandoc
+  - parallel
   - pre-commit
   - pyenv
   - python@3.10
@@ -72,54 +103,6 @@ brewSoftware:
   - vim
   - zig
   - zsh
-
-guixSoftware:
-  - aspell
-  - bash
-  - bazaar
-  - bc
-  - binutils
-  - cflow
-  - chess
-  - clisp
-  - coreutils
-  - cssc
-  - diffutils
-  - fdisk
-  - findutils
-  - gawk
-  - gcc
-  - gcl
-  - gdb
-  - gforth
-  - ghostscript
-  - gnucobol
-  - gnupg
-  - gprolog
-  - grep
-  - guile
-  - gzip
-  - inetutils
-  - less
-  - make
-  - mes
-  - mit-scheme
-  - nano
-  - octave
-  - parallel
-  - patch
-  - rcs
-  - recutils
-  - sbcl
-  - scm
-  - screen
-  - sed
-    #  - smalltalk
-  - tar
-  - time
-  - units
-  - wget
-  - which
 
 intelAPTRepoSoftware:
   intel-aikit
