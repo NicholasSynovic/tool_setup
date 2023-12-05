@@ -18,7 +18,7 @@ updateSystem:
 	sudo snap refresh
 
 runAnsible:
-	ansible-playbook minimalConfiguration.yml
-	ansible-playbook installAPTSoftware.yml --ask-become-pass
-	ansible-playbook installLinuxbrewSoftware.yml --ask-become-pass
-#	ansible-playbook buildSoftware.yml
+	python3 -m ansible playbook minimalConfiguration.yml
+	python3 -m ansible playbook installAPTSoftware.yml --ask-become-pass
+	python3 -m ansible playbook installLinuxbrewSoftware.yml --ask-become-pass
+#	python3 -m ansible playbook buildSoftware.yml
