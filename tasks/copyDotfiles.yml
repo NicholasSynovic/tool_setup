@@ -8,6 +8,6 @@
 
 - name: "Copy .config directory to $HOME/.config directory"
   become: false
-  copy:
-    dest: "/home/{{ currentUser.stdout }}/.config"
-    src: dotifles/.config
+  shell:
+    chdir: "dotfiles"
+    cmd: "cp .config /home/{{ currentUser.stdout }}"
