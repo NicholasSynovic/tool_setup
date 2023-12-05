@@ -1,4 +1,4 @@
-# Playbook to install rustup 
+# Playbook to install rustup
 
 - name: "Download rustup installer"
   become: false
@@ -18,3 +18,9 @@
   shell:
     chdir: "/home/{{ currentUser.stdout }}"
     cmd: "mv .rustup /home/{{ currentUser }}/.local/bin/rustup"
+
+- name: "Move cargo"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}"
+    cmd: "mv .cargo /home/{{ currentUser }}/.local/bin/cargo"

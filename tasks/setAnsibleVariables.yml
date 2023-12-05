@@ -8,22 +8,14 @@
   command: 'lsb_release -r -s'
   register: osVersion
 
-- name: "Set Linuxbrew directory"
-  stat:
-    path: "/home/linuxbrew/.linuxbrew"
-  register: linuxbrewDir
+# Register executables
 
 - name: "Set Alire executable"
   stat:
     path: "/home/{{ currentUser }}/.local/bin/alr"
   register: alireExecutable
 
-- name: "Set Choosenim directory"
-  stat:
-    path: "/home/linuxbrew/.choosenim"
-  register: choosenimDir
-
-- name: "Set Alire executable"
+- name: "Set Elm executable"
   stat:
     path: "/home/{{ currentUser }}/.local/bin/elm"
   register: elmExecutable
@@ -38,12 +30,24 @@
     path: "/home/{{ currentUser }}/.local/bin/rig"
   register: fbcExecutable
 
+# Register directories
+
+- name: "Set choosenim directory"
+  stat:
+    path: "/home/{{ currentUser }}/.choosenim"
+  register: choosenimDir
+
+- name: "Set Linuxbrew directory"
+  stat:
+    path: "/home/linuxbrew/.linuxbrew"
+  register: linuxbrewDir
+
 - name: "Set rustup directory"
   stat:
-    path: "/home/{{ currentUser }}.local/bin/rustup"
+    path: "/home/{{ currentUser }}/.local/bin/rustup"
   register: rustupDir
 
 - name: "Set SDKMan directory"
   stat:
-    path: "/home/{{ currentUser }}.local/bin/sdkman"
+    path: "/home/{{ currentUser }}/.local/bin/sdkman"
   register: sdkmanDir

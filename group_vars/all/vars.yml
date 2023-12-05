@@ -2,7 +2,7 @@ aptSoftware:
   - apt-transport-https
   - aspell
   - bash
-  - bazaar
+  - bzr
   - bc
   - binutils
   - build-essential
