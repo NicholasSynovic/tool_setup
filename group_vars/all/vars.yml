@@ -11,7 +11,7 @@ aptSoftware:
   - git
   - gnucobol
   - gnupg
-  - guix
+#  - guix
   - gzip
   - lynx
   - make
