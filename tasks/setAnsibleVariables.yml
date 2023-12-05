@@ -12,29 +12,29 @@
 
 - name: "Set Alire executable"
   stat:
-    path: "/home/{{ currentUser }}/.local/bin/alr"
+    path: "/home/{{ currentUser.stdout }}/.local/bin/alr"
   register: alireExecutable
 
 - name: "Set Elm executable"
   stat:
-    path: "/home/{{ currentUser }}/.local/bin/elm"
+    path: "/home/{{ currentUser.stdout }}/.local/bin/elm"
   register: elmExecutable
 
 - name: "Set Free Basic Compiler executable"
   stat:
-    path: "/home/{{ currentUser }}/.local/bin/fbc"
+    path: "/home/{{ currentUser.stdout }}/.local/bin/fbc"
   register: fbcExecutable
 
 - name: "Set r-rig executable"
   stat:
-    path: "/home/{{ currentUser }}/.local/bin/rig"
+    path: "/home/{{ currentUser.stdout }}/.local/bin/rig"
   register: fbcExecutable
 
 # Register directories
 
 - name: "Set choosenim directory"
   stat:
-    path: "/home/{{ currentUser }}/.choosenim"
+    path: "/home/{{ currentUser.stdout }}/.choosenim"
   register: choosenimDir
 
 - name: "Set Linuxbrew directory"
@@ -44,10 +44,10 @@
 
 - name: "Set rustup directory"
   stat:
-    path: "/home/{{ currentUser }}/.local/bin/rustup"
+    path: "/home/{{ currentUser.stdout }}/.local/bin/rustup"
   register: rustupDir
 
 - name: "Set SDKMan directory"
   stat:
-    path: "/home/{{ currentUser }}/.local/bin/sdkman"
+    path: "/home/{{ currentUser.stdout }}/.local/bin/sdkman"
   register: sdkmanDir
