@@ -9,5 +9,5 @@
 - name: "Copy .config directory to $HOME/.config directory"
   become: false
   shell:
-    dest: "/home/{{ currentUser.stdout }/.config"
+    dest: "/home/{{ currentUser.stdout }}/.config"
     src: dotifles/.config
