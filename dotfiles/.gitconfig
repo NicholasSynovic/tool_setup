@@ -1,0 +1,12 @@
+[core]
+	editor = nvim
+[user]
+	email = nicholas.synovic@gmail.com
+	name = Nicholas M. Synovic
+[commit]
+	gpgsign = True
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

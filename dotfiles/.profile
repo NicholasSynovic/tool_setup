@@ -25,33 +25,29 @@ if [ -f "$HOME/.pathConfig" ]; then
     . "$HOME/.pathConfig"
 fi
 
+# If sdkman is installed, source sdkman config
+if [ -s "$HOME/.local/bin/sdkman/bin/sdkman-init.sh" ]; then
+    export SDKMAN_DIR="$HOME/.local/bin/sdkman"
+    . "$SDKMAN_DIR/bin/sdkman-init.sh"
+fi
+
 # If Linuxbrew is installed, run `brew shellenv`
 if [ -s "/home/linuxbrew/.linuxbrew/bin/brew" ]; then
     export LINUXBREW_DIR="/home/linuxbrew/.linuxbrew"
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
-# If Guix is installed, source ~/.guix-profile
-if [ -f "$HOME/.guix-profile" ]; then
-    . "$HOME/.guix-profile"
+    eval "$($LINUXBREW_DIR/bin/brew shellenv)"
 fi
 
 # If nvm is installed, source nvm config auto-completion
 if [ -d "$LINUXBREW_DIR/opt/nvm" ]; then
+    export NVM_DIR="$HOME/.nvm"
     . "$LINUXBREW_DIR/opt/nvm/nvm.sh"
     . "$LINUXBREW_DIR/opt/nvm/etc/bash_completion.d/nvm"
-    export NVM_DIR="$HOME/.nvm"
 fi
 
-# If sdkman is installed, source sdkman config
-if [ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]; then
-    export SDKMAN_DIR="$HOME/.sdkman"
-    . "$SDKMAN_DIR/bin/sdkman/sdkman-init.sh"
-fi
 
 # If shell is non-login interactive and if Intel oneAPI installed, source /opt/intel/oneapi/setvars.sh
-if [[ $- == *i* ]]; then 
-    if [ -f "/opt/intel/oneapi/setvars.sh" ]; then
-        . "/opt/intel/oneapi/setvars.sh"
-    fi
-fi
+#if [[ $- == *i* ]]; then
+#    if [ -f "/opt/intel/oneapi/setvars.sh" ]; then
+#        . "/opt/intel/oneapi/setvars.sh"
+#    fi
+#fi

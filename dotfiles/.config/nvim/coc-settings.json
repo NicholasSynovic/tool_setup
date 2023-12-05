@@ -1,0 +1,81 @@
+{
+    "languageserver": {
+        "bash": {
+            "args": [
+                "start"
+            ],
+            "command": "bash-language-server",
+            "filetypes": [
+                "sh",
+                "bash"
+            ],
+            "ignoredRootPaths": [
+                "~"
+            ]
+        },
+        "clangd": {
+            "command": "clangd",
+            "filetypes": [
+                "c",
+                "cc",
+                "cpp",
+                "c++",
+                "objc",
+                "objcpp"
+            ],
+            "rootPatterns": [
+                "compile_flags.txt",
+                "compile_commands.json"
+            ]
+        },
+        "cmake": {
+            "command": "cmake-language-server",
+            "filetypes": [
+                "cmake"
+            ],
+            "initializationOptions": {
+                "buildDirectory": "build"
+            },
+            "rootPatterns": [
+                "build/"
+            ]
+        },
+        "dockerfile": {
+            "args": [
+                "--stdio"
+            ],
+            "command": "docker-langserver",
+            "filetypes": [
+                "dockerfile"
+            ]
+        },
+        "golang": {
+            "args": [
+                "serve",
+                "-debug",
+                "0.0.0.0:8484",
+                "-rpc.trace"
+            ],
+            "command": "gopls",
+            "filetypes": [
+                "go"
+            ],
+            "rootPatterns": [
+                "go.mod"
+            ]
+        },
+        "graphql": {
+            "args": [
+                "server",
+                "-m",
+                "stream"
+            ],
+            "command": "graphql-lsp",
+            "filetypes": [
+                "typescript",
+                "typescriptreact",
+                "graphql"
+            ]
+        }
+    }
+}

@@ -5,3 +5,9 @@
   shell:
     chdir: "dotfiles"
     cmd: "find -maxdepth 1 -type f | xargs -I % cp % /home/{{ currentUser.stdout }}/%"
+
+- name: "Copy .config directory to $HOME/.config directory"
+  become: false
+  shell:
+    dest: "/home/{{ currentUser.stdout }/.config"
+    src: dotifles/.config

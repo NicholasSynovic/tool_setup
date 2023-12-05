@@ -18,3 +18,8 @@ fi
 if [ -d "$HOME/.nimble" ] ; then
     PATH="$HOME/.nimble/bin:$PATH"
 fi
+
+# If cargo is installed, add to PATH
+if [ -d "$HOME/.local/bin/cargo" ]; then
+    PATH="$HOME/.local/bin/cargo/bin:$PATH"
+fi
