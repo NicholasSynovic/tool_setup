@@ -6,7 +6,6 @@
     tasks:
       - import_tasks: tasks/ansible/variables.yml
       - import_tasks: tasks/configure/home.yml
-      - import_tasks: tasks/system/dotfiles.yml
 
         # APT related tasks
       - import_tasks: tasks/configure/apt.yml
@@ -18,10 +17,14 @@
           "not linuxbrewDir.stat.exists"
       -import_tasks: tasks/install/managers/linuxbrew.yml
 
-      # Building and installing software from source related tasks
+      # Ada Alire related tasks
       - import_tasks: tasks/installAlire.yml
         when:
           "not alireExecutable.stat.exists"
+      - import_tasks: tasks/install/managers/alire.yml
+        when:
+          "alireExecutable.stat.exists"
+
       - import_tasks: tasks/installChoosenim.yml
         when:
           "not choosenimDir.stat.exists"
@@ -49,9 +52,14 @@
       - import_tasks: tasks/installV.yml
         when:
           "not vDir.stat.exists"
+      
+      # Copy dotfiles to the $HOME directory
+      - import_tasks: tasks/system/dotfiles.yml
+
+    
 
     # Configuring the user related tasks
-      - name: "Create SSH key"
-        become: false
-        shell:
-          cmd: "ssh-keygen -b 3072 -t rsa -f ~/.ssh/id_rsa -q -N ''"
+      # - name: "Create SSH key"
+      #   become: false
+      #   shell:
+      #     cmd: "ssh-keygen -b 3072 -t rsa -f ~/.ssh/id_rsa -q -N ''"

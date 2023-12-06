@@ -1,0 +1,9 @@
+- name: "Install GNAT"
+  become: false
+  shell:
+    cmd: "{{ alireExecutable.path }} toolchain --install gnat"
+
+- name: "Install gprbuild"
+  become: false
+  shell:
+    cmd: "{{ alireExecutable.path }} toolchain --install gprbuild"
