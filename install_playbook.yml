@@ -80,11 +80,6 @@
       
       # Copy dotfiles to the $HOME directory
       - import_tasks: tasks/system/dotfiles.yml
-
-    
-
-    # Configuring the user related tasks
-      # - name: "Create SSH key"
-      #   become: false
-      #   shell:
-      #     cmd: "ssh-keygen -b 3072 -t rsa -f ~/.ssh/id_rsa -q -N ''"
+      
+      # Install bun
+      # Install Mojo
