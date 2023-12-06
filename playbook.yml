@@ -18,7 +18,7 @@
       - import_tasks: tasks/install/managers/linuxbrew.yml
 
       # Ada Alire related tasks
-      - import_tasks: tasks/installAlire.yml
+      - import_tasks: tasks/install/alire.yml
         when:
           "not alireExecutable.stat.exists"
       - import_tasks: tasks/install/managers/alire.yml
