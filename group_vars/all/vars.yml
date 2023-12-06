@@ -1,11 +1,13 @@
 aptSoftware:
   - apt-transport-https
   - aspell
+  - autoconf 
   - bash
-  - bzr
   - bc
   - binutils
   - build-essential
+  - build-essential 
+  - bzr
   - ca-certificates
   - cflow
   - clisp
@@ -17,6 +19,7 @@ aptSoftware:
   - file
   - findutils
   - flatpak
+  - fop 
   - gawk
   - gcc
   - gcl
@@ -31,12 +34,23 @@ aptSoftware:
   - grep
   - gzip
   - less
+  - libgl1-mesa-dev 
+  - libglu1-mesa-dev 
+  - libncurses5-dev 
+  - libncurses-dev 
+  - libpng-dev 
+  - libssh-dev 
+  - libwxgtk3.0-gtk3-dev 
+  - libwxgtk-webview3.0-gtk3-dev 
+  - libxml2-utils 
   - lynx
+  - m4 
   - make
   - mes
   - mit-scheme
   - nano
   - octave
+  - openjdk-11-jdk
   - patch
   - perl
   - pigz
@@ -62,8 +76,10 @@ aptSoftware:
   - texlive-xetex
   - time
   - units
+  - unixodbc-dev 
   - unzip
   - wget
+  - xsltproc 
   - zip
 
 brewSoftware:
