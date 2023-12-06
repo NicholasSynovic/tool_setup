@@ -59,7 +59,7 @@
 
 - name: "Set rustup directory"
   stat:
-    path: "/home/{{ currentUser.stdout }}/.local/bin/rustup"
+    path: "/home/{{ currentUser.stdout }}/.local/bin/cargo"
   register: rustupDir
 
 - name: "Set SDKMan directory"
