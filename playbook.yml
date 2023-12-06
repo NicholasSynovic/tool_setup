@@ -6,15 +6,82 @@
     tasks:
       - import_tasks: tasks/setAnsibleVariables.yml
       - import_tasks: tasks/configureHomeDirectory.yml
+      - import_tasks: tasks/copyDotfiles.yml
+
+        # APT related tasks
+      - import_tasks: tasks/configureAPT.yml
+      - name: "Install APT software"
+        become: true
+        apt:
+          name: "{{ aptSoftware }}"
+    
+      - name: "Install software from Racket APT repository"
+        become: true
+        apt:
+          name: "{{ racketAPTRepoSoftware }}"
+
+      - name: "Install software from SWI-Prolog APT repository"
+        become: true
+        apt:
+          name: "{{ swiAPTRepoSoftware }}"
+
+      - name: "Install software from Microsoft APT repository"
+        become: true
+        apt:
+          name: "{{ microsoftAPTRepoSoftware }}"
+      
+      - name: "Install software from Intel APT repository"
+        become: true
+        shell:
+          cmd: "apt install intel-aikit intel-basekit intel-hpckit -y"
+
+      # Linuxbrew related tasks
+      - import_tasks: tasks/installLinuxbrew.yml
+        when:
+          "not linuxbrewDir.stat.exists"
+      
+      - name: "Install Linuxbrew software"
+        become: false
+        community.general.homebrew:
+          name: "{{ brewSoftware }}"
+          state: "latest"
+          update_homebrew: true
+          upgrade_all: true
+
+      # Building and installing software from source related tasks
+      - import_tasks: tasks/installAlire.yml
+        when:
+          "not alireExecutable.stat.exists"
       - import_tasks: tasks/installChoosenim.yml
-        # - import_tasks: tasks/installAlire.yml
-        # - import_tasks: tasks/installTCC.yml
-        # - import_tasks: tasks/installV.yml
-        # - import_tasks: tasks/installBitkeeper.yml
-        # - import_tasks: tasks/installRustup.yml
-        # - import_tasks: tasks/installElm.yml
-        # - import_tasks: tasks/installSDKMan.yml
-        # - import_tasks: tasks/installRig.yml
-        # - import_tasks: tasks/installLinuxbrew.yml
-        # - import_tasks: tasks/configureAPT.yml
-        # - import_tasks: tasks/installFreeBasicCompiler.yml
+        when:
+          "not choosenimDir.stat.exists"
+      - import_tasks: tasks/installElm.yml
+        when:
+          "not elmExecutable.stat.exists"
+      - import_tasks: tasks/installFreeBasicCompiler.yml
+        when:
+          "not fbcExecutable.stat.exists"
+      - import_tasks: tasks/installOMZ.yml
+        when:
+          "not omzDir.stat.exists"
+      - import_tasks: tasks/installRig.yml
+        when:
+          "not rigExecutable.stat.exists"
+      - import_tasks: tasks/installRustup.yml
+        when:
+          "not rustupDir.stat.exists"
+      - import_tasks: tasks/installSDKMan.yml
+        when:
+          "not sdkmanDir.stat.exists"
+      - import_tasks: tasks/installTCC.yml
+        when:
+          "not tccExecutable.stat.exists"
+      - import_tasks: tasks/installV.yml
+        when:
+          "not vDir.stat.exists"
+
+    # Configuring the user related tasks
+      - name: "Create SSH key"
+        become: false
+        shell:
+          cmd: "ssh-keygen -b 3072 -t rsa -f ~/.ssh/id_rsa -q -N ''"
