@@ -1,6 +1,9 @@
 # Enable GPG output to console
 export GPG_TTY=$(tty)
 
+# Enable Erlang kerl to build docs
+export KERL_BUILD_DOCS="yes"
+
 # If .aliases found, source ~/.aliases
 if [ -f "$HOME/.aliases" ]; then
     . "$HOME/.aliases"
