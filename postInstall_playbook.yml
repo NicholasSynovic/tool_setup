@@ -4,10 +4,14 @@
     connection: local
 
     tasks:
-      - name: "Echo shell variables"
-        become: false
-        command: "env"
-        register: env
-
-      - debug: msg="{{ env.stdout }}"
-
+      - import_tasks: tasks/ansible/variables.yml
+      - import_tasks: tasks/configure/shells.yml
+      - import_tasks: tasks/configure/ssh.yml
+      - import_tasks: tasks/install/managers/asdf.yml
+      - import_tasks: tasks/install/managers/juliaup.yml
+      - import_tasks: tasks/install/managers/luaver.yml
+      - import_tasks: tasks/install/managers/nvm.yml
+      - import_tasks: tasks/install/managers/rbenv.yml
+      # lynis
+      # pyenv
+      # bun

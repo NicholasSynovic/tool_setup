@@ -1,0 +1,9 @@
+- name: "Install Lua"
+  become: false
+  shell:
+    cmd: "luaver install 5.4.6"
+
+- name: "Install Luarocks"
+  become: false
+  shell:
+    cmd: "luaver install-luarocks 3.9.2"

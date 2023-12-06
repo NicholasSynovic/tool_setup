@@ -19,6 +19,7 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias resource='source $HOME/.profile'
+alias resource-bash='source $HOME/.bash'
+alias resource-zsh='source $HOME/.zshrc'
 
 alias intelpython='/opt/intel/oneapi/intelpython/python3.9/bin/python3.9'

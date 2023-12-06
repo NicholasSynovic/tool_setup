@@ -1,0 +1,9 @@
+- name: "Install node"
+  become: false
+  shell:
+    cmd: "nvm install node"
+
+- name: "Use node"
+  become: false
+  shell:
+    cmd: "nvm use node"
