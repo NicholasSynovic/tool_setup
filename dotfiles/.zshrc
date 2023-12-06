@@ -9,3 +9,8 @@ plugins=(git)
 
 # Source original config
 source $ZSH/oh-my-zsh.sh
+
+# Source shell profile
+if [ -f $HOME/.shell_profile ]; then
+    . $HOME/.shell_profile
+fi

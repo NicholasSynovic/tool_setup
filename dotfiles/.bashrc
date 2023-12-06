@@ -71,3 +71,8 @@ esac
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# Source shell profile
+if [ -f $HOME/.shell_profile ]; then
+    . $HOME/.shell_profile
+fi
