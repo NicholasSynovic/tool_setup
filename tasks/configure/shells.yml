@@ -1,0 +1,10 @@
+- name: "Add ZSH to /etc/shells"
+  become: true
+  shell:
+    chdir: "/etc"
+    cmd: "echo $(which zsh) >> shells"
+
+- name: "Change shell to ZSH"
+  become: false
+  shell:
+    cmd: "chsh -s $(which zsh)"
