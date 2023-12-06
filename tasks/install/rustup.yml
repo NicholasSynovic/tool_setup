@@ -13,12 +13,6 @@
     chdir: "/home/{{ currentUser.stdout }}/.temp"
     cmd: "./rustupInstaller.sh -y --no-modify-path"
 
-- name: "Move rustup"
-  become: false
-  shell:
-    chdir: "/home/{{ currentUser.stdout }}"
-    cmd: "mv .rustup /home/{{ currentUser.stdout }}/.local/bin/rustup"
-
 - name: "Move cargo"
   become: false
   shell:
