@@ -25,33 +25,55 @@
         when:
           "alireExecutable.stat.exists"
 
-      - import_tasks: tasks/installChoosenim.yml
+      # Nim choosenim related tasks
+      - import_tasks: tasks/install/choosenim.yml
         when:
           "not choosenimDir.stat.exists"
-      - import_tasks: tasks/installElm.yml
+
+      # Elm related tasks
+      - import_tasks: tasks/install/elm.yml
         when:
           "not elmExecutable.stat.exists"
-      - import_tasks: tasks/installFreeBasicCompiler.yml
+
+      # Basic FBC related tasks
+      - import_tasks: tasks/install/fbc.yml
         when:
           "not fbcExecutable.stat.exists"
-      - import_tasks: tasks/installOMZ.yml
+
+      # ZSH oh-my-zsh related tasks
+      - import_tasks: tasks/install/omz.yml
         when:
           "not omzDir.stat.exists"
-      - import_tasks: tasks/installRig.yml
+
+      # R r-rig related tasks
+      - import_tasks: tasks/install/rig.yml
         when:
           "not rigExecutable.stat.exists"
-      - import_tasks: tasks/installRustup.yml
+
+      # Rust rustup related tasks
+      - import_tasks: tasks/install/rustup.yml
         when:
           "not rustupDir.stat.exists"
-      - import_tasks: tasks/installSDKMan.yml
+
+      # JVM SDKMan related tasks
+      - import_tasks: tasks/install/sdkman.yml
         when:
           "not sdkmanDir.stat.exists"
-      - import_tasks: tasks/installTCC.yml
+
+      # Tiny C Compiler (TCC) related tasks
+      - import_tasks: tasks/install/tcc.yml
         when:
           "not tccExecutable.stat.exists"
-      - import_tasks: tasks/installV.yml
+
+      # V related tasks
+      - import_tasks: tasks/install/v.yml
         when:
           "not vDir.stat.exists"
+
+      # Vim vim-plug related tasks
+      - import_tasks: tasks/install/vimplug.yml
+        when:
+          "not vimplugExecutable.stat.exists"
       
       # Copy dotfiles to the $HOME directory
       - import_tasks: tasks/system/dotfiles.yml

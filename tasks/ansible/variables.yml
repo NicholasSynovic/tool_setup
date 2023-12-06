@@ -35,6 +35,11 @@
     path: "/home/{{ currentUser.stdout }}/.local/bin/tcc"
   register: tccExecutable
 
+- name: "Set vim-plug executable"
+  stat:
+    path: "/home/{{ currentUser.stdout }}/.vim/autoload/plug.vim"
+  register: vimplugExecutable
+
 # Register directories
 
 - name: "Set choosenim directory"
