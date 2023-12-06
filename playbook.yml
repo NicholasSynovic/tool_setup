@@ -4,36 +4,13 @@
     connection: local
 
     tasks:
-      - import_tasks: tasks/setAnsibleVariables.yml
-      - import_tasks: tasks/configureHomeDirectory.yml
-      - import_tasks: tasks/copyDotfiles.yml
+      - import_tasks: tasks/ansible/variables.yml
+      - import_tasks: tasks/configure/home.yml
+      - import_tasks: tasks/system/dotfiles.yml
 
         # APT related tasks
-      - import_tasks: tasks/configureAPT.yml
-      - name: "Install APT software"
-        become: true
-        apt:
-          name: "{{ aptSoftware }}"
-    
-      - name: "Install software from Racket APT repository"
-        become: true
-        apt:
-          name: "{{ racketAPTRepoSoftware }}"
-
-      - name: "Install software from SWI-Prolog APT repository"
-        become: true
-        apt:
-          name: "{{ swiAPTRepoSoftware }}"
-
-      - name: "Install software from Microsoft APT repository"
-        become: true
-        apt:
-          name: "{{ microsoftAPTRepoSoftware }}"
-      
-      - name: "Install software from Intel APT repository"
-        become: true
-        shell:
-          cmd: "apt install intel-aikit intel-basekit intel-hpckit -y"
+      - import_tasks: tasks/configure/apt.yml
+      - import_tasks: tasks/install/managers/apt.yml
 
       # Linuxbrew related tasks
       - import_tasks: tasks/installLinuxbrew.yml
