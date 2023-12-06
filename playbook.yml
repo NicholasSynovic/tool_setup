@@ -49,6 +49,9 @@
       - import_tasks: tasks/install/rig.yml
         when:
           "not rigExecutable.stat.exists"
+      - import_tasks: tasks/install/managers/rig.yml
+        when:
+          "rigExecutable.stat.exists"
 
       # Rust rustup related tasks
       - import_tasks: tasks/install/rustup.yml
