@@ -1,0 +1,13 @@
+---
+  - name: "Post-installation Linux Configuration"
+    hosts: [localhost]
+    connection: local
+
+    tasks:
+      - name: "Echo shell variables"
+        become: false
+        command: "env"
+        register: env
+
+      - debug: msg="{{ env.stdout }}"
+
