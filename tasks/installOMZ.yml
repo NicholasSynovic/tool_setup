@@ -1,1 +1,7 @@
 # Install Oh My ZSH (OMZ)
+
+- name: "Install oh-my-zsh"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}"
+    cmd: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'

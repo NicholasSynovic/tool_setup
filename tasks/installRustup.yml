@@ -17,10 +17,10 @@
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}"
-    cmd: "mv .rustup /home/{{ currentUser }}/.local/bin/rustup"
+    cmd: "mv .rustup /home/{{ currentUser.stdout }}/.local/bin/rustup"
 
 - name: "Move cargo"
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}"
-    cmd: "mv .cargo /home/{{ currentUser }}/.local/bin/cargo"
+    cmd: "mv .cargo /home/{{ currentUser.stdout }}/.local/bin/cargo"

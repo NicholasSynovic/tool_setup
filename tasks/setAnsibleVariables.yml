@@ -28,7 +28,12 @@
 - name: "Set r-rig executable"
   stat:
     path: "/home/{{ currentUser.stdout }}/.local/bin/rig"
-  register: fbcExecutable
+  register: rigExecutable
+
+- name: "Set tcc executable"
+  stat:
+    path: "/home/{{ currentUser.stdout }}/.local/bin/tcc"
+  register: tccExecutable
 
 # Register directories
 
@@ -42,6 +47,11 @@
     path: "/home/linuxbrew/.linuxbrew"
   register: linuxbrewDir
 
+- name: "Set OMZ directory"
+  stat:
+    path: "/home/{{ currentUser.stdout }}/.oh-my-zsh"
+  register: omzDir 
+
 - name: "Set rustup directory"
   stat:
     path: "/home/{{ currentUser.stdout }}/.local/bin/rustup"
@@ -51,3 +61,8 @@
   stat:
     path: "/home/{{ currentUser.stdout }}/.local/bin/sdkman"
   register: sdkmanDir
+
+- name: "Set V directory"
+  stat:
+    path: "/home/{{ currentUser.stdout }}/.local/bin/v"
+  register: vDir

@@ -8,6 +8,7 @@
     state: directory
   loop:
     - "/home/{{ currentUser.stdout }}/.config"
+    - "/home/{{ currentUser.stdout }}/.ssh"
     - "/home/{{ currentUser.stdout }}/.temp"
     - "/home/{{ currentUser.stdout }}/.trash"
     - "/home/{{ currentUser.stdout }}/Documents"
