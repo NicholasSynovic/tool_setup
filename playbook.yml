@@ -15,7 +15,7 @@
       - import_tasks: tasks/install/linuxbrew.yml
         when:
           "not linuxbrewDir.stat.exists"
-      -import_tasks: tasks/install/managers/linuxbrew.yml
+      - import_tasks: tasks/install/managers/linuxbrew.yml
 
       # Ada Alire related tasks
       - import_tasks: tasks/installAlire.yml
