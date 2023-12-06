@@ -13,17 +13,10 @@
       - import_tasks: tasks/install/managers/apt.yml
 
       # Linuxbrew related tasks
-      - import_tasks: tasks/installLinuxbrew.yml
+      - import_tasks: tasks/install/linuxbrew.yml
         when:
           "not linuxbrewDir.stat.exists"
-      
-      - name: "Install Linuxbrew software"
-        become: false
-        community.general.homebrew:
-          name: "{{ brewSoftware }}"
-          state: "latest"
-          update_homebrew: true
-          upgrade_all: true
+      -import_tasks: tasks/install/managers/linuxbrew.yml
 
       # Building and installing software from source related tasks
       - import_tasks: tasks/installAlire.yml
