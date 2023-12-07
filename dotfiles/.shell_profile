@@ -45,8 +45,8 @@ fi
 
 
 # If shell is non-login interactive and if Intel oneAPI installed, source /opt/intel/oneapi/setvars.sh
-#if [[ $- == *i* ]]; then
-#    if [ -f "/opt/intel/oneapi/setvars.sh" ]; then
-#        . "/opt/intel/oneapi/setvars.sh"
-#    fi
-#fi
+if [[ $- == *i* ]]; then
+    if [ -f "/opt/intel/oneapi/setvars.sh" ]; then
+        . "/opt/intel/oneapi/setvars.sh"
+    fi
+fi
