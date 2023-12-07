@@ -87,6 +87,7 @@ brewSoftware:
   - astyle
   - cloc
   - cmake
+  - cowsay
   - crystal-lang
   - cvs
   - deno
