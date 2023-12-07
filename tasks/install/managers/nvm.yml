@@ -1,9 +1,11 @@
 - name: "Install node"
   become: false
   shell:
-    cmd: "nvm install node"
+    cmd: "source /home/{{ currentUser.stdout }}/.nvm/nvm.sh && nvm install node"
+    executable: "/bin/bash"
 
 - name: "Use node"
   become: false
   shell:
-    cmd: "nvm use node"
+    cmd: "source /home/{{ currentUser.stdout }}/.nvm/nvm.sh && nvm use node"
+    executable: "/bin/bash"

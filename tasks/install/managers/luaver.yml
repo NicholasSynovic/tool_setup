@@ -3,7 +3,17 @@
   shell:
     cmd: "luaver install 5.4.6"
 
+- name: "Set Lua version"
+  become: false
+  shell:
+    cmd: "luaver set-default 5.4.6"
+
 - name: "Install Luarocks"
   become: false
   shell:
     cmd: "luaver install-luarocks 3.9.2"
+
+- name: "Set Luarocks version"
+  become: false
+  shell:
+    cmd: "luaver set-default-luarocks 3.9.2"

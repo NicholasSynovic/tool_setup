@@ -2,9 +2,9 @@
   become: true
   shell:
     chdir: "/etc"
-    cmd: "echo $(which zsh) >> shells"
+    cmd: "sudo echo $(which zsh) >> shells"
 
-- name: "Change shell to ZSH"
-  become: false
-  shell:
-    cmd: "chsh -s $(which zsh)"
+# - name: "Change shell to ZSH"
+#   become: false
+#   shell:
+#     cmd: "chsh -s $(which zsh)"

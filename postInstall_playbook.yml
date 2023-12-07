@@ -5,8 +5,8 @@
 
     tasks:
       - import_tasks: tasks/ansible/variables.yml
-      - import_tasks: tasks/configure/shells.yml
-      - import_tasks: tasks/configure/ssh.yml
+        # - import_tasks: tasks/configure/shells.yml
+        # - import_tasks: tasks/configure/ssh.yml
       - import_tasks: tasks/install/managers/asdf.yml
       - import_tasks: tasks/install/managers/juliaup.yml
       - import_tasks: tasks/install/managers/luaver.yml
