@@ -1,3 +1,6 @@
+aptSoftware_GUI:
+  - calibre
+  
 aptSoftware:
   - apt-transport-https
   - aspell
