@@ -1,0 +1,32 @@
+# Task to configure the home directory of a user with both general directories
+# and software specific dot (.) folders
+
+- name: "Create general directories"
+  become: false
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ currentUser.stdout }}/.config"
+    - "/home/{{ currentUser.stdout }}/.ssh"
+    - "/home/{{ currentUser.stdout }}/.temp"
+    - "/home/{{ currentUser.stdout }}/.trash"
+    - "/home/{{ currentUser.stdout }}/Documents"
+    - "/home/{{ currentUser.stdout }}/Downloads"
+
+- name: "Create userspecific bin directories"
+  become: false
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ currentUser.stdout }}/.local"
+    - "/home/{{ currentUser.stdout }}/.local/bin"
+
+- name: "Create project/{org} directories"
+  become: false
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "/home/{{ currentUser.stdout }}/Documents/projects"

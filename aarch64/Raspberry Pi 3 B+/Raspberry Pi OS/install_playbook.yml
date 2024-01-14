@@ -1,0 +1,15 @@
+---
+  - name: "Setup Linux"
+    hosts: [localhost]
+    connection: local
+
+    tasks:
+      - import_tasks: tasks/ansible/variables.yml
+      - import_tasks: tasks/configure/home.yml
+
+        # APT related tasks
+      - import_tasks: tasks/configure/apt.yml
+      - import_tasks: tasks/install/managers/apt.yml
+
+      # Copy dotfiles to the $HOME directory
+      - import_tasks: tasks/system/dotfiles.yml
