@@ -1,24 +1,30 @@
-- name: "Install APT software"
-  become: true
-  apt:
-    name: "{{ aptSoftware }}"
+- name: "Download Docker installation script"
+  become: false
+  uri:
+    dest: "installDocker.sh"
+    mode: "+x"
+    url: "https://get.docker.com/"
 
-- name: "Install software from Racket APT repository"
-  become: true
-  apt:
-    name: "{{ racketAPTRepoSoftware }}"
-
-- name: "Install software from SWI-Prolog APT repository"
-  become: true
-  apt:
-    name: "{{ swiAPTRepoSoftware }}"
-
-- name: "Install software from Microsoft APT repository"
-  become: true
-  apt:
-    name: "{{ microsoftAPTRepoSoftware }}"
-
-- name: "Install software from Intel APT repository"
+- name: "Run Docker installation script"
   become: true
   shell:
-    cmd: "apt install intel-aikit intel-basekit intel-hpckit -y"
+    cmd: "./installDocker.sh"
+    executable: "/bin/sh"
+
+- name: "Add current user to Docker group"
+  become: true
+  user:
+    append: true
+    groups: "docker"
+    name: "{{ currentUser.stdout }}"
+
+- name: "Reload user groups"
+  become: false
+  shell:
+    cmd: "newgrp docker"
+
+- name: "Cleanup Docker installation"
+  become: false
+  file:
+    state: "absent"
+    path: "installDocker.sh"

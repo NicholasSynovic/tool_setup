@@ -10,11 +10,8 @@
         # APT related tasks
       - import_tasks: tasks/configure/apt.yml
       
-        # CURL related tasks
-      - import_tasks: tasks/install/managers/curl.yml
-        
         # Docker related tasks
-      - import_tasks: tasks/install/managers/apt.yml
+      - import_tasks: tasks/install/docker.yml
 
       # # Copy dotfiles to the $HOME directory
       # - import_tasks: tasks/system/dotfiles.yml
