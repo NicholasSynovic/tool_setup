@@ -1,0 +1,28 @@
+# Task to configure repos, update, upgrade, and autoremove software with APT 
+
+- name: "Upgrade Packages"
+  become: true
+  apt:
+    upgrade: safe
+    autoremove: true
+    purge: true
+
+- name: "Upgrade System Packages"
+  become: true
+  apt:
+    upgrade: full
+    autoremove: true
+    purge: true
+
+- name: "Upgrade Distribution"
+  become: true
+  apt:
+    upgrade: dist
+    autoremove: true
+    purge: true
+
+- name: "Update APT Cache"
+  become: true
+  apt:
+    update_cache: true
+    autoclean: true
