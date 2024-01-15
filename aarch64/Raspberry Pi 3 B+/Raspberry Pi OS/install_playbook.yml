@@ -1,7 +1,7 @@
 ---
-  - name: "Setup Linux"
-    hosts: [localhost]
-    connection: local
+  - name: "Setup Raspberry Pi 3 B+ w/ Raspberry Pi OS"
+    hosts: all
+    connection: ssh
 
     tasks:
       - import_tasks: tasks/ansible/variables.yml
@@ -9,7 +9,12 @@
 
         # APT related tasks
       - import_tasks: tasks/configure/apt.yml
+      
+        # CURL related tasks
+      - import_tasks: tasks/install/managers/curl.yml
+        
+        # Docker related tasks
       - import_tasks: tasks/install/managers/apt.yml
 
-      # Copy dotfiles to the $HOME directory
-      - import_tasks: tasks/system/dotfiles.yml
+      # # Copy dotfiles to the $HOME directory
+      # - import_tasks: tasks/system/dotfiles.yml
