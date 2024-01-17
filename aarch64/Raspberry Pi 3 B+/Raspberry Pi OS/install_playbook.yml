@@ -12,6 +12,7 @@
       
         # Docker related tasks
       - import_tasks: tasks/install/docker.yml
+      - import_tasks: tasks/install/portainer.yml
 
       # # Copy dotfiles to the $HOME directory
       # - import_tasks: tasks/system/dotfiles.yml
