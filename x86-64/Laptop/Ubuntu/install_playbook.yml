@@ -4,11 +4,12 @@
     connection: local
 
     tasks:
+      # Top level configuration tasks
       - import_tasks: tasks/ansible/variables.yml
       - import_tasks: tasks/configure/system.yml
       - import_tasks: tasks/configure/home.yml
 
-        # APT related tasks
+      # APT related tasks
       - import_tasks: tasks/configure/apt.yml
       - import_tasks: tasks/install/managers/apt.yml
 
