@@ -19,6 +19,9 @@
           "not linuxbrewDir.stat.exists"
       - import_tasks: tasks/install/managers/linuxbrew.yml
 
+      # Flatpak related tasks
+      - import_tasks: tasks/configure/flatpak.yml
+
       # Ada Alire related tasks
       - import_tasks: tasks/install/alire.yml
         when:

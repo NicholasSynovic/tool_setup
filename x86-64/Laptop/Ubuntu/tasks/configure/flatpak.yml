@@ -1,0 +1,5 @@
+
+- name: "Add Flathub repository"
+  become: true
+  shell:
+    cmd: "flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
