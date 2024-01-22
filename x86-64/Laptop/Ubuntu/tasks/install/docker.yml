@@ -1,0 +1,31 @@
+- name: "Download Docker installation script"
+  become: false
+  uri:
+    creates: "installDocker.sh"
+    dest: "installDocker.sh"
+    mode: "+x"
+    url: "https://get.docker.com/"
+
+- name: "Run Docker installation script"
+  become: true
+  shell:
+    cmd: "./installDocker.sh"
+    executable: "/bin/sh"
+  register: "docker_install"
+
+- name: "Add current user to Docker group"
+  when: docker_install is succeeded
+  become: true
+  user:
+    append: true
+    groups: "docker"
+    name: "{{ currentUser.stdout }}"
+
+- name: "Reload user groups"
+  meta: reset_connection
+
+- name: "Cleanup Docker installation"
+  become: false
+  file:
+    state: "absent"
+    path: "installDocker.sh"
