@@ -4,20 +4,12 @@
     connection: local
 
     tasks:
-      - name: "Add OBS APT repository"
-        become: true
-        apt_repository:
-          repo: "ppa:obsproject/obs-studio"
+      # Top level configuration tasks
+      - import_tasks: tasks/ansible/variables.yml
+      - import_tasks: tasks/configure/system.yml
 
-      - name: "Add PlayOnLinux repository"
-        become: true
-        shell:
-          cmd: "wget -q 'http://deb.playonlinux.com/public.gpg' -O- | apt-key add - && wget http://deb.playonlinux.com/playonlinux_cosmic.list -O /etc/apt/sources.list.d/playonlinux.list"
-
-      - name: "Update APT cache"
-        become: true
-        apt:
-          update_cache: true
+      # APT related tasks
+      - import_tasks: tasks/configure/apt_gui.yml
 
       - name: "Install GUI software from APT"
         apt:
