@@ -14,3 +14,6 @@
 
       # Snap related tasks
       - import_tasks: tasks/install/managers/snap_gui.yml
+
+      # Flatpak related tasks
+      - import_tasks: tasks/install/managers/flatpak_gui.yml
