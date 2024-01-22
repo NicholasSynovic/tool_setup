@@ -1,0 +1,4 @@
+- name: "Enable 32 bit architecture"
+  become: true
+  shell:
+    cmd: "dpkg --add-architecture 1386"
