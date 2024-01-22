@@ -22,3 +22,9 @@
   become: true
   shell:
     cmd: "apt install intel-aikit intel-basekit intel-hpckit -y"
+
+- name: "Install Wine"
+  become: true
+  apt:
+    name: "winehq-stable"
+    install_recommends: true
