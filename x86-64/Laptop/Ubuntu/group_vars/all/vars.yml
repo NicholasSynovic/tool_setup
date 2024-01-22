@@ -7,6 +7,11 @@ aptSoftware_GUI:
 
 snapSoftware_GUI:
   - slack
+  - postman
+
+flatpakSoftware_GUI:
+  - com.calibre_ebook.calibre
+  - com.discordapp.Discord
 
 aptSoftware:
   - apt-transport-https
