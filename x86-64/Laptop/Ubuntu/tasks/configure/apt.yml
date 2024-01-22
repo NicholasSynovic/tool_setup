@@ -42,6 +42,12 @@
   apt_repository:
     repo: "ppa:plt/racket"
 
+- name: "Update APT Cache"
+  become: true
+  apt:
+    update_cache: true
+    autoclean: true
+
 - name: "Upgrade Packages"
   become: true
   apt:
@@ -62,9 +68,3 @@
     upgrade: dist
     autoremove: true
     purge: true
-
-- name: "Update APT Cache"
-  become: true
-  apt:
-    update_cache: true
-    autoclean: true
