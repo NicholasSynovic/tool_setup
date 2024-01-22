@@ -4,7 +4,7 @@
     connection: local
 
     tasks:
-      - name: "Add OBS APT repository":
+      - name: "Add OBS APT repository"
         become: true
         apt_repository:
           repo: "ppa:obsproject/obs-studio"
