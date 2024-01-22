@@ -10,11 +10,7 @@
 
       # APT related tasks
       - import_tasks: tasks/configure/apt_gui.yml
-
-      - name: "Install GUI software from APT"
-        apt:
-          name: "{{ aptSoftware_GUI }}"
-          state: present
+      - import_tasks: tasks/install/managers/apt_gui.yml
 
       - name: "Install software from Snap"
         become: true
