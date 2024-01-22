@@ -12,8 +12,5 @@
       - import_tasks: tasks/configure/apt_gui.yml
       - import_tasks: tasks/install/managers/apt_gui.yml
 
-      - name: "Install software from Snap"
-        become: true
-        community.general.snap:
-          name: "{{ snapSoftware_GUI }}"
-          state: "present" 
+      # Snap related tasks
+      - import_tasks: tasks/install/managers/snap_gui.yml
