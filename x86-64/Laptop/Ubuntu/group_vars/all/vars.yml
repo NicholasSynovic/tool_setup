@@ -8,7 +8,6 @@ aptSoftware_GUI:
 snapSoftware_GUI:
   - slack
 
-  
 aptSoftware:
   - apt-transport-https
   - aspell
@@ -40,6 +39,7 @@ aptSoftware:
   - gfortran
   - ghostscript
   - git
+  - gnome-software-plugin-flatpak
   - gnucobol
   - gnupg
   - gprolog
