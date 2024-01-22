@@ -21,7 +21,7 @@
 
       - name: "Install GUI software from APT"
         apt:
-          name: "libreoffice"
+          name: "{{ aptSoftware_GUI }}"
           state: present
 
       - name: "Install software from Snap"
