@@ -5,6 +5,7 @@
 
     tasks:
       - import_tasks: tasks/ansible/variables.yml
+      - import_tasks: tasks/configure/system.yml
       - import_tasks: tasks/configure/home.yml
 
         # APT related tasks

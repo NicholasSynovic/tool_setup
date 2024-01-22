@@ -11,10 +11,21 @@
   shell:
     cmd: "wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB | gpg --dearmor | sudo tee /usr/share/keyrings/oneapi-archive-keyring.gpg > /dev/null"
 
+- name: "Download and install Wine keyring"
+  become: true
+  shell:
+    cmd: "wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key"
+
 - name: "Add Intel APT repository"
   become: true
   shell:
     cmd: "echo 'deb [signed-by=/usr/share/keyrings/oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main' | sudo tee /etc/apt/sources.list.d/oneAPI.list"
+
+- name: "Add Wine APT repository"
+  become: true
+  shell:
+    # ONLY FOR Ubuntu 22.04
+    cmd: "wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources"
 
 - name: "Install Microsoft signing key + repository"
   become: true
