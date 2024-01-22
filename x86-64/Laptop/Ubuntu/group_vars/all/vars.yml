@@ -1,5 +1,13 @@
 aptSoftware_GUI:
-  - calibre
+  - code
+  - firefox
+  - libreoffice
+  - obs-studio
+  - playonlinux
+
+snapSoftware_GUI:
+  - slack
+
   
 aptSoftware:
   - apt-transport-https
@@ -19,6 +27,7 @@ aptSoftware:
   - curl
   - diffutils
   - fdisk
+  - ffmpeg
   - file
   - findutils
   - flatpak
