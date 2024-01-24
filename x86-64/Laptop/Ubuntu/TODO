@@ -1,6 +1,8 @@
 docker
 zoom
 virtualbox
+bun
+mojo
 
 Coc Language Servers + useful utils
 ada language server config
