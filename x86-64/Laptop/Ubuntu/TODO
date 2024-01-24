@@ -1,3 +1,54 @@
 docker
 zoom
 virtualbox
+
+Coc Language Servers + useful utils
+ada language server config
+coc-sh
+coc-clangd
+coc-cmake
+coc-cl
+coc-clojure
+crystalline
+coc-css
+coc-deno
+dockerfile-language-server-nodejs
+compose-language-service
+elixer-ls
+elvish language server
+erlang_ls
+elm-language-server
+fortran-language-server
+coc-go
+graphql-language-service-cli
+Haskell Language Server
+coc-html
+coc-java
+coc-tsserver
+coc-json
+languageserver.jl
+coc-julia
+kotlin-language-server
+digestif
+coc-texlab
+lua-lsp
+coc-markdownlint
+nimlsp
+ocaml-language-server
+coc-perl
+coc-phpls
+coc-jedi
+mypy
+black
+isort
+coc-r-lsp
+coc-solargraph
+coc-rust-analyzer
+sql-language-server
+metals
+coc-metals
+vls
+coc-zig
+efm-langserver
+
+
