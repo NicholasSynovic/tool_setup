@@ -3,6 +3,11 @@ zoom
 virtualbox
 bun
 mojo
+watchman (https://facebook.github.io/watchman/)
+
+Automatically setup coc extensions (https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#automation-script)
+Other coc-sources (https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources#more-sources)
+Coc lists (https://github.com/neoclide/coc.nvim/wiki/Using-coc-list#extensions)
 
 Coc Language Servers + useful utils
 ada language server config
