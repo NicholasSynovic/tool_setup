@@ -1,3 +1,25 @@
+aptBaseSoftware:
+  - apt-transport-https
+  - bash
+  - build-essential
+  - ca-certificates
+  - coreutils
+  - diffutils
+  - file
+  - findutils
+  - gawk
+  - gnupg
+  - grep
+  - less
+  - nano
+  - pkg-config
+  - procps
+  - recutils
+  - software-properties-common
+  - time
+  - units
+  - xsltproc
+
 aptSoftware_GUI:
   - firefox
   - gnome-software-plugin-flatpak
@@ -17,28 +39,19 @@ flatpakSoftware_GUI:
   - com.discordapp.Discord
 
 aptSoftware:
-  - apt-transport-https
   - aspell
-  - autoconf 
-  - bash
+  - autoconf
   - bc
   - binutils
-  - build-essential
   - bzr
-  - ca-certificates
   - cflow
   - clisp
-  - coreutils
   - cssc
   - curl
-  - diffutils
   - fdisk
   - ffmpeg
-  - file
-  - findutils
   - flatpak
-  - fop 
-  - gawk
+  - fop
   - gcc
   - gcl
   - gdb
@@ -47,41 +60,33 @@ aptSoftware:
   - ghostscript
   - git
   - gnucobol
-  - gnupg
   - gprolog
-  - grep
   - gzip
-  - less
-  - libgl1-mesa-dev 
-  - libglu1-mesa-dev 
-  - libncurses5-dev 
-  - libncurses-dev 
+  - libgl1-mesa-dev
+  - libglu1-mesa-dev
+  - libncurses5-dev
+  - libncurses-dev
   - libpng-dev
   - libssh-dev
   - libwxgtk3.0-gtk3-dev
-  - libwxgtk-webview3.0-gtk3-dev 
-  - libxml2-utils 
+  - libwxgtk-webview3.0-gtk3-dev
+  - libxml2-utils
   - lynx
-  - m4 
+  - m4
   - make
   - mes
-  - nano
   - openjdk-11-jdk
   - patch
   - perl
   - pigz
-  - pkg-config
-  - procps
   - qemu-system
   - qemu-user-static
   - rcs
-  - recutils
   - sbcl
   - scm
   - screen
   - sed
   - snapd
-  - software-properties-common
   - sqlite3
   - subversion
   - tar
@@ -90,12 +95,9 @@ aptSoftware:
   - texlive-latex-base
   - texlive-latex-extra
   - texlive-xetex
-  - time
-  - units
-  - unixodbc-dev 
+  - unixodbc-dev
   - unzip
   - wget
-  - xsltproc 
   - zip
 
 brewSoftware:
