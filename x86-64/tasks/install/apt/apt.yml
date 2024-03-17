@@ -1,0 +1,24 @@
+- name: "Install Libraries from APT"
+  become: true
+  apt:
+    name: "{{ aptLibs }}"
+
+- name: "Install Basic Software From APT"
+  become: true
+  apt:
+    name: "{{ aptBaseSoftware }}"
+
+- name: "Install Software Packages From APT"
+  become: true
+  apt:
+    name: "{{ aptSoftware }}"
+
+- name: "Install Programming Tools From APT"
+  become: true
+  apt:
+    name: "{{ aptProgrammingTools }}"
+
+- name: "Install Texlive Packages From APT"
+  become: true
+  apt:
+    name: "{{ aptTex }}"

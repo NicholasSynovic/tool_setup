@@ -6,11 +6,17 @@
     tasks:
       # Top level configuration tasks
       - import_tasks: tasks/variables.yml
-      - import_tasks: tasks/configure/system.yml
-      - import_tasks: tasks/configure/home.yml
-      - import_tasks: tasks/system/dotfiles.yml
+      - import_tasks: tasks/configure/configure_System.yml
+      - import_tasks: tasks/configure/configure_Home.yml
+      - import_tasks: tasks/copy/copy_ConfigDirectory.yml
+      - import_tasks: tasks/copy/copy_Dotfiles.yml
 
       # APT related tasks
+      # Add APT repos
+      # Update
+      # Upgrade
+      # Install base software
+      - import_tasks: tasks/install/apt/apt.yml
       - import_tasks: tasks/configure/laptop_cmdline_apt.yml
       - import_tasks: tasks/install/managers/laptop_cmdline_apt.yml
 

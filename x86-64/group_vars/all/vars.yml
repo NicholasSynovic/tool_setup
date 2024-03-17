@@ -4,23 +4,33 @@ aptBaseSoftware:
   - build-essential
   - ca-certificates
   - coreutils
+  - curl
   - diffutils
+  - fdisk
   - file
   - findutils
   - gawk
+  - gcc
   - gnupg
   - grep
+  - gzip
   - less
+  - make
   - nano
+  - perl
   - pkg-config
   - procps
   - recutils
+  - sed
   - software-properties-common
+  - tar
   - time
   - units
-  - xsltproc
+  - unzip
+  - wget
+  - zip
 
-aptSoftware_GUI:
+aptGUI:
   - firefox
   - gnome-software-plugin-flatpak
   - libreoffice
@@ -29,39 +39,7 @@ aptSoftware_GUI:
   - octave
   - playonlinux
 
-snapSoftware_GUI:
-  - slack
-  - postman
-  - code
-
-flatpakSoftware_GUI:
-  - com.calibre_ebook.calibre
-  - com.discordapp.Discord
-
-aptSoftware:
-  - aspell
-  - autoconf
-  - bc
-  - binutils
-  - bzr
-  - cflow
-  - clisp
-  - cssc
-  - curl
-  - fdisk
-  - ffmpeg
-  - flatpak
-  - fop
-  - gcc
-  - gcl
-  - gdb
-  - gforth
-  - gfortran
-  - ghostscript
-  - git
-  - gnucobol
-  - gprolog
-  - gzip
+aptLibs:
   - libgl1-mesa-dev
   - libglu1-mesa-dev
   - libncurses5-dev
@@ -71,34 +49,54 @@ aptSoftware:
   - libwxgtk3.0-gtk3-dev
   - libwxgtk-webview3.0-gtk3-dev
   - libxml2-utils
-  - lynx
+  - unixodbc-dev
+
+aptProgrammingTools:
+  - autoconf
+  - bc
+  - binutils
+  - bzr
+  - cflow
+  - clisp
+  - cssc
+  - fop
+  - gcl
+  - gdb
+  - gforth
+  - gfortran
+  - ghostscript
+  - git
+  - gnucobol
+  - gprolog
   - m4
-  - make
   - mes
   - openjdk-11-jdk
+  - openjdk-11-jre
   - patch
-  - perl
-  - pigz
-  - qemu-system
-  - qemu-user-static
   - rcs
   - sbcl
   - scm
-  - screen
-  - sed
-  - snapd
   - sqlite3
   - subversion
-  - tar
+  - xsltproc
+
+aptSoftware:
+  - aspell
+  - ffmpeg
+  - flatpak
+  - lynx
+  - pigz
+  - qemu-system
+  - qemu-user-static
+  - screen
+  - snapd
+
+aptTex:
   - texlive-extra-utils
   - texlive-fonts-recommended
   - texlive-latex-base
   - texlive-latex-extra
   - texlive-xetex
-  - unixodbc-dev
-  - unzip
-  - wget
-  - zip
 
 brewSoftware:
   - asdf
@@ -137,6 +135,15 @@ brewSoftware:
   - vim
   - zig
   - zsh
+
+snapSoftware_GUI:
+  - slack
+  - postman
+  - code
+
+flatpakSoftware_GUI:
+  - com.calibre_ebook.calibre
+  - com.discordapp.Discord
 
 microsoftAPTRepoSoftware:
   - dotnet-sdk-8.0
