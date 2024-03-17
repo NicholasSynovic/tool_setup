@@ -8,6 +8,7 @@
       - import_tasks: tasks/ansible/laptop_cmdline_variables.yml
       - import_tasks: tasks/configure/system.yml
       - import_tasks: tasks/configure/home.yml
+      - import_tasks: tasks/system/dotfiles.yml
 
       # APT related tasks
       - import_tasks: tasks/configure/laptop_cmdline_apt.yml
@@ -37,9 +38,6 @@
 
       # Docker related tasks
       - import_tasks: tasks/install/docker.yml
-      
-      # Copy dotfiles to the $HOME directory
-      - import_tasks: tasks/system/dotfiles.yml
 
       # Install bun
       # Install Mojo
