@@ -90,6 +90,7 @@ aptSoftware:
   - qemu-user-static
   - screen
   - snapd
+  - zsh
 
 aptTex:
   - texlive-extra-utils
@@ -106,8 +107,6 @@ brewSoftware:
   - cowsay
   - cvs
   - deno
-  - elvish
-  - fish
   - fossil
   - gh
   - ghcup
@@ -134,7 +133,6 @@ brewSoftware:
   - tmux
   - vim
   - zig
-  - zsh
 
 snapSoftware_GUI:
   - slack
@@ -147,7 +145,6 @@ flatpakSoftware_GUI:
 
 microsoftAPTRepoSoftware:
   - dotnet-sdk-8.0
-  - powershell
 
 racketAPTRepoSoftware:
   - racket
