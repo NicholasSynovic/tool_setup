@@ -1,0 +1,5 @@
+- name: "Install Wine Software From APT"
+  become: true
+  apt:
+    name: "winehq-stable"
+    install_recommends: true

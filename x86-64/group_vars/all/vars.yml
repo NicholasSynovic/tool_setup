@@ -134,20 +134,23 @@ brewSoftware:
   - vim
   - zig
 
-snapSoftware_GUI:
+flatpakGUISoftware:
+  - com.calibre_ebook.calibre
+  - com.discordapp.Discord
+
+microsoftAPTSoftware:
+  - dotnet-sdk-8.0
+
+racketAPTSoftware:
+  - racket
+
+snapGUISoftware:
   - slack
   - postman
   - code
 
-flatpakSoftware_GUI:
-  - com.calibre_ebook.calibre
-  - com.discordapp.Discord
-
-microsoftAPTRepoSoftware:
-  - dotnet-sdk-8.0
-
-racketAPTRepoSoftware:
-  - racket
-
-swiAPTRepoSoftware:
+swiAPTSoftware:
   - swi-prolog
+
+wineAPTSoftware:
+  - winehq-stable

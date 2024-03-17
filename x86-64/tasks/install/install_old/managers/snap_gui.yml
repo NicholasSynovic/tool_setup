@@ -1,6 +1,0 @@
-
-- name: "Install GUI software from Snap"
-  become: true
-  community.general.snap:
-    name: "{{ snapSoftware_GUI }}"
-    state: "present"

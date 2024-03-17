@@ -6,9 +6,19 @@
     dest: "/home/{{ currentUser.stdout }}/.temp/linuxbrewInstaller.sh"
     mode: "+x"
     url: "https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
+  when: "not linuxbrewDir.stat.exists"
 
 - name: "Install Linuxbrew"
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}/.temp"
     cmd: "NONINTERACTIVE=1 ./linuxbrewInstaller.sh"
+  when: "not linuxbrewDir.stat.exists"
+
+- name: "Install Linuxbrew software"
+  become: false
+  community.general.homebrew:
+    name: "{{ brewSoftware }}"
+    state: "latest"
+    update_homebrew: true
+    upgrade_all: true

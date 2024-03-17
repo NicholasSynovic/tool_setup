@@ -14,17 +14,23 @@
       # Install APT Software
       - import_tasks: tasks/configure/configure_APT.yml
       - import_tasks: tasks/update/update_APT.yml
-      - import_tasks: tasks/update/upgrade_APT.yml
+      - import_tasks: tasks/upgrade/upgrade_APT.yml
       - import_tasks: tasks/install/apt/apt.yml
+      - import_tasks: tasks/install/apt/apt_Intel.yml
+      - import_tasks: tasks/install/apt/apt_Microsoft.yml
+      - import_tasks: tasks/install/apt/apt_Racket.yml
+      - import_tasks: tasks/install/apt/apt_SWI.yml
+      - import_tasks: tasks/install/apt/apt_Wine.yml
 
-      # Install Brew Software
+      # Install Linuxbrew Software
       - import_tasks: tasks/install/install_Linuxbrew.yml
-        when:
-          "not linuxbrewDir.stat.exists"
-      - import_tasks: tasks/install/managers/linuxbrew.yml
 
-      # Flatpak related tasks
-      - import_tasks: tasks/configure/flatpak.yml
+      # Install Flatpak Software
+      - import_tasks: tasks/configure/configure_Flatpak.yml
+      - import_tasks: tasks/install/install_Flatpak.yml
+      
+      # Install Snap Software
+      - import_tasks: tasks/install/install_Snap.yml
 
       # ZSH oh-my-zsh related tasks
       - import_tasks: tasks/install/omz.yml

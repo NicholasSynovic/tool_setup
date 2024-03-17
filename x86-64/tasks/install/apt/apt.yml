@@ -1,4 +1,4 @@
-- name: "Install Libraries from APT"
+- name: "Install Libraries From APT"
   become: true
   apt:
     name: "{{ aptLibs }}"

@@ -1,0 +1,4 @@
+- name: "Install SWI Software from APT"
+  become: true
+  apt:
+    name: "{{ swiAPTSoftware }}"

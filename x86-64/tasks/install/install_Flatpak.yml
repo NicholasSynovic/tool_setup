@@ -1,0 +1,6 @@
+- name: "Install GUI Software From Flatpak"
+  become: true
+  community.general.flatpak:
+    name: "{{ flatpakGUISoftware }}"
+    state: "present"
+  when: enable_gui | bool

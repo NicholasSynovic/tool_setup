@@ -1,0 +1,4 @@
+- name: "Install Microsoft Software From APT"
+  become: true
+  apt:
+    name: "{{ microsoftAPTRepoSoftware }}"
