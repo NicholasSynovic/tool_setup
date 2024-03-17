@@ -1,0 +1,26 @@
+# Install V Lang
+
+- name: "Download V Lang"
+  become: false
+  get_url:
+    dest: "/home/{{ currentUser.stdout }}/.temp/vLang.zip"
+    url: "https://github.com/vlang/v/releases/latest/download/v_linux.zip"
+
+- name: "Decompress V Lang"
+  become: false
+  unarchive:
+    copy: false
+    dest: "/home/{{ currentUser.stdout }}/.temp"
+    src: "/home/{{ currentUser.stdout }}/.temp/vLang.zip"
+
+- name: "Compile V Lang"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp/v"
+    cmd: "make"
+
+- name: "Install V Lang"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp"
+    cmd: "mv v /home/{{ currentUser.stdout }}/.local/bin/v"

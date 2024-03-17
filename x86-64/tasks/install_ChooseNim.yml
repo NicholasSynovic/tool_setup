@@ -1,0 +1,15 @@
+# Install choosenim
+
+- name: "Download choosenim"
+  become: false
+  uri:
+    dest: "/home/{{ currentUser.stdout }}/.temp/choosenim.sh"
+    follow_redirects: true
+    mode: "+x"
+    url: "https://nim-lang.org/choosenim/init.sh"
+
+- name: "Install choosenim"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp"
+    cmd: "./choosenim.sh -y"

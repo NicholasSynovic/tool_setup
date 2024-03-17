@@ -1,0 +1,19 @@
+- name: "Add Erlang asdf-vm plugin"
+  become: false
+  shell:
+    cmd: "asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git"
+
+- name: "Install Erlang"
+  become: false
+  shell:
+    cmd: "asdf install erlang latest"
+
+- name: "Add Elixir asdf-vm plugin"
+  become: false
+  shell:
+    cmd: "asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git"
+
+- name: "Install Elixir"
+  become: false
+  shell:
+    cmd: "asdf install elixir latest"

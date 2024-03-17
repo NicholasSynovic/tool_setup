@@ -1,0 +1,4 @@
+- name: "Install Julia"
+  become: false
+  shell:
+    cmd: "juliaup add release"

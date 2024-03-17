@@ -1,0 +1,7 @@
+# Copy .config directory to $HOME directory
+
+- name: "Copy .config directory to $HOME/.config directory"
+  become: false
+  shell:
+    chdir: "dotfiles"
+    cmd: "cp -r .config /home/{{ currentUser.stdout }}"

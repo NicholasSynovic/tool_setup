@@ -104,7 +104,6 @@ brewSoftware:
   - cloc
   - cmake
   - cowsay
-  - crystal-lang
   - cvs
   - deno
   - elvish

@@ -1,0 +1,10 @@
+- name: "Install Wine"
+  become: true
+  apt:
+    name: "winehq-stable"
+    install_recommends: true
+
+- name: "Install GUI software from APT"
+  become: true
+  apt:
+    name: "{{ aptSoftware_GUI }}"

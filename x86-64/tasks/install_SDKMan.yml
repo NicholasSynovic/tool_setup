@@ -1,0 +1,14 @@
+# Playbook to install SDKMan
+
+- name: "Download SDKMan installer"
+  become: false
+  get_url:
+    dest: "/home/{{ currentUser.stdout }}/.temp/sdkmanInstaller.bash"
+    mode: "+x"
+    url: "https://get.sdkman.io?rcupdate=false"
+
+- name: "Install SDKMan"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp"
+    cmd: "SDKMAN_DIR='/home/{{ currentUser.stdout }}/.local/bin/sdkman' ./sdkmanInstaller.bash"

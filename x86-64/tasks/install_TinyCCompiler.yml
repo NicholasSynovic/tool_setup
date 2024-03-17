@@ -1,0 +1,31 @@
+# Install Tiny C Compiler (tcc)
+
+- name: "Clone TCC repository"
+  become: false
+  git:
+    dest: "/home/{{ currentUser.stdout }}/.temp/tcc"
+    repo: "https://repo.or.cz/tinycc.git"
+
+- name: "Configure TCC"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp/tcc"
+    cmd: "./configure --prefix='/home/{{ currentUser.stdout }}/.local'"
+
+- name: "Build TCC"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp/tcc"
+    cmd: "make"
+
+- name: "Test TCC"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp/tcc"
+    cmd: "make test"
+
+- name: "Install TCC"
+  become: false
+  shell:
+    chdir: "/home/{{ currentUser.stdout }}/.temp/tcc"
+    cmd: "make install"
