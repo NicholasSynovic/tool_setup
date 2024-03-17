@@ -1,7 +1,10 @@
 aptSoftware_GUI:
   - firefox
+  - gnome-software-plugin-flatpak
   - libreoffice
+  - mit-scheme
   - obs-studio
+  - octave
   - playonlinux
 
 snapSoftware_GUI:
@@ -21,7 +24,6 @@ aptSoftware:
   - bc
   - binutils
   - build-essential
-  - build-essential 
   - bzr
   - ca-certificates
   - cflow
@@ -44,7 +46,6 @@ aptSoftware:
   - gfortran
   - ghostscript
   - git
-  - gnome-software-plugin-flatpak
   - gnucobol
   - gnupg
   - gprolog
@@ -55,18 +56,16 @@ aptSoftware:
   - libglu1-mesa-dev 
   - libncurses5-dev 
   - libncurses-dev 
-  - libpng-dev 
-  - libssh-dev 
-  - libwxgtk3.0-gtk3-dev 
+  - libpng-dev
+  - libssh-dev
+  - libwxgtk3.0-gtk3-dev
   - libwxgtk-webview3.0-gtk3-dev 
   - libxml2-utils 
   - lynx
   - m4 
   - make
   - mes
-  - mit-scheme
   - nano
-  - octave
   - openjdk-11-jdk
   - patch
   - perl
@@ -137,11 +136,6 @@ brewSoftware:
   - vim
   - zig
   - zsh
-
-intelAPTRepoSoftware:
-  intel-aikit
-  intel-basekit
-  intel-hpckit
 
 microsoftAPTRepoSoftware:
   - dotnet-sdk-8.0
