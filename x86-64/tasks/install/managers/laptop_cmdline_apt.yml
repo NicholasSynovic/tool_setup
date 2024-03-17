@@ -1,0 +1,14 @@
+- name: "Install APT software"
+  become: true
+  apt:
+    name: "{{ aptSoftware }}"
+
+- name: "Install software from Microsoft APT repository"
+  become: true
+  apt:
+    name: "{{ microsoftAPTRepoSoftware }}"
+
+- name: "Install software from Intel APT repository"
+  become: true
+  apt:
+    name: "{{ intelAPTRepoSoftware }}"

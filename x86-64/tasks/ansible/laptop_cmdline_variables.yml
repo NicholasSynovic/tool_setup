@@ -1,0 +1,33 @@
+# Set variables to be referenced within Ansible tasks
+
+- name: "Get current username"
+  command: whoami
+  register: currentUser
+
+- name: "Get Ubuntu version"
+  command: 'lsb_release -r -s'
+  register: osVersion
+
+# Register executables
+
+- name: "Set vim-plug executable"
+  stat:
+    path: "/home/{{ currentUser.stdout }}/.vim/autoload/plug.vim"
+  register: vimplugExecutable
+
+# Register directories
+
+- name: "Set Linuxbrew directory"
+  stat:
+    path: "/home/linuxbrew/.linuxbrew"
+  register: linuxbrewDir
+
+- name: "Set OMZ directory"
+  stat:
+    path: "/home/{{ currentUser.stdout }}/.oh-my-zsh"
+  register: omzDir 
+
+- name: "Set SDKMan directory"
+  stat:
+    path: "/home/{{ currentUser.stdout }}/.local/bin/sdkman"
+  register: sdkmanDir

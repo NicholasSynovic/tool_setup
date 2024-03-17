@@ -1,0 +1,45 @@
+---
+  - name: "Setup linux command line on laptop"
+    hosts: [localhost]
+    connection: local
+
+    tasks:
+      # Top level configuration tasks
+      - import_tasks: tasks/ansible/laptop_cmdline_variables.yml
+      - import_tasks: tasks/configure/system.yml
+      - import_tasks: tasks/configure/home.yml
+
+      # APT related tasks
+      - import_tasks: tasks/configure/laptop_cmdline_apt.yml
+      - import_tasks: tasks/install/managers/laptop_cmdline_apt.yml
+
+      # Linuxbrew related tasks
+      - import_tasks: tasks/install/linuxbrew.yml
+        when:
+          "not linuxbrewDir.stat.exists"
+      - import_tasks: tasks/install/managers/linuxbrew.yml
+
+      # Flatpak related tasks
+      - import_tasks: tasks/configure/flatpak.yml
+
+      # ZSH oh-my-zsh related tasks
+      - import_tasks: tasks/install/omz.yml
+        when:
+          "not omzDir.stat.exists"
+
+      # JVM SDKMan related tasks
+      - import_tasks: tasks/install/sdkman.yml
+        when:
+      # Vim vim-plug related tasks
+      - import_tasks: tasks/install/vimplug.yml
+        when:
+          "not vimplugExecutable.stat.exists"
+
+      # Docker related tasks
+      - import_tasks: tasks/install/docker.yml
+      
+      # Copy dotfiles to the $HOME directory
+      - import_tasks: tasks/system/dotfiles.yml
+
+      # Install bun
+      # Install Mojo

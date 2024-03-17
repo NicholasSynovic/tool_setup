@@ -17,6 +17,9 @@ updateSystem:
 	sudo apt autoremove --purge -y
 	sudo snap refresh
 
+installLinuxLaptopCommandLine:
+	/usr/bin/python3 -m ansible playbook linux_laptop_cmdline.yml --ask-become-pass
+
 runAnsible:
 	/usr/bin/python3 -m ansible playbook install_playbook.yml --ask-become-pass
 	/usr/bin/python3 -m ansible playbook install_gui_playbook.yml --ask-become-pass
