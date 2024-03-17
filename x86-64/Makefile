@@ -18,7 +18,10 @@ updateSystem:
 	sudo snap refresh
 
 installLinuxLaptopCommandLine:
-	/usr/bin/python3 -m ansible playbook linux_laptop_cmdline.yml --ask-become-pass
+	/usr/bin/python3 -m ansible playbook test.yml --ask-become-pass -e "enable_gui=false"
+
+installLinuxLaptopGUI:
+	/usr/bin/python3 -m ansible playbook test.yml --ask-become-pass -e "enable_gui=true"
 
 runAnsible:
 	/usr/bin/python3 -m ansible playbook install_playbook.yml --ask-become-pass

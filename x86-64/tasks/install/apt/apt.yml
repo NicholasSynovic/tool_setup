@@ -22,3 +22,9 @@
   become: true
   apt:
     name: "{{ aptTex }}"
+
+- name: "Install GUI Packages From APT"
+  become: true
+  apt:
+    name: "{{ aptGUI }}"
+  when: enable_gui | bool

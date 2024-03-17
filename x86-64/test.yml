@@ -1,0 +1,19 @@
+---
+  - name: "Setup linux command line on laptop"
+    hosts: [localhost]
+    connection: local
+
+    tasks:
+      # Top level configuration tasks
+      - import_tasks: tasks/variables.yml
+      - import_tasks: tasks/configure/configure_System.yml
+      - import_tasks: tasks/configure/configure_Home.yml
+      - import_tasks: tasks/copy/copy_ConfigDirectory.yml
+      - import_tasks: tasks/copy/copy_Dotfiles.yml
+
+      # APT related tasks
+      # Add APT repos
+      # Update
+      # Upgrade
+      # Install base software
+      - import_tasks: tasks/install/apt/apt.yml
