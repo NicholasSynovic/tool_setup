@@ -11,16 +11,13 @@
       - import_tasks: tasks/copy/copy_ConfigDirectory.yml
       - import_tasks: tasks/copy/copy_Dotfiles.yml
 
-      # APT related tasks
-      # Add APT repos
-      # Update
-      # Upgrade
-      # Install base software
+      # Install APT Software
+      - import_tasks: tasks/configure/configure_APT.yml
+      - import_tasks: tasks/update/update_APT.yml
+      - import_tasks: tasks/update/upgrade_APT.yml
       - import_tasks: tasks/install/apt/apt.yml
-      - import_tasks: tasks/configure/laptop_cmdline_apt.yml
-      - import_tasks: tasks/install/managers/laptop_cmdline_apt.yml
 
-      # Linuxbrew related tasks
+      # Install Brew Software
       - import_tasks: tasks/install/linuxbrew.yml
         when:
           "not linuxbrewDir.stat.exists"
