@@ -1,15 +1,9 @@
-
-# Install Alire (Ada package manager)
-
-- name: "Download Alire"
+- name: "Install GNAT"
   become: false
-  get_url:
-    dest: "/home/{{ currentUser.stdout }}/.temp/alire.zip"
-    url: "https://github.com/alire-project/alire/releases/download/v1.2.2/alr-1.2.2-bin-x86_64-linux.zip"
+  shell:
+    cmd: "{{ alireExecutable.stat.path }} toolchain --install gnat"
 
-- name: "Decompress Alire"
+- name: "Install gprbuild"
   become: false
-  unarchive:
-    copy: false
-    dest: "/home/{{ currentUser.stdout }}/.local"
-    src: "/home/{{ currentUser.stdout }}/.temp/alire.zip"
+  shell:
+    cmd: "{{ alireExecutable.stat.path }} toolchain --install gprbuild"
