@@ -34,6 +34,7 @@ aptGUI:
   - firefox
   - gnome-software-plugin-flatpak
   - libreoffice
+  - lutris
   - mit-scheme
   - obs-studio
   - octave
