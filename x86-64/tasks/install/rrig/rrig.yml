@@ -1,0 +1,11 @@
+# Install r-rig
+
+- name: "Install latest R release"
+  become: true
+  shell:
+    cmd: "{{ rigExecutable.stat.path }} install release"
+
+- name: "Set default to be the latest R release"
+  become: true
+  shell:
+    cmd: "{{ rigExecutable.stat.path }} default release"
