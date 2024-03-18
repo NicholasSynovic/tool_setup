@@ -1,9 +1,0 @@
-- name: "Install ruby 3"
-  become: false
-  shell:
-    cmd: "rbenv install 3.2.2"
-
-- name: "Set ruby version"
-  become: false
-  shell:
-    cmd: "rbenv global 3.2.2"

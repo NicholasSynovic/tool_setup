@@ -1,7 +1,0 @@
-- name: "Install Linuxbrew software"
-  become: false
-  community.general.homebrew:
-    name: "{{ brewSoftware }}"
-    state: "latest"
-    update_homebrew: true
-    upgrade_all: true

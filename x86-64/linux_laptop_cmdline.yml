@@ -1,5 +1,5 @@
 ---
-  - name: "Setup linux command line on laptop"
+  - name: "Setup Linux"
     hosts: [localhost]
     connection: local
 
@@ -31,6 +31,18 @@
       
       # Install Snap Software
       - import_tasks: tasks/install/install_Snap.yml
+
+      # Install Alire
+      - import_tasks: tasks/install/install_Alire.yml
+
+      # Install ASDF
+      - import_tasks: tasks/install/install_ASDF.yml
+      
+      # Install ChooseNim
+      - import_tasks: tasks/install/install_ChooseNim.yml
+      
+      # Install Docker
+      - import_tasks: tasks/install/install_Docker.yml
 
       # ZSH oh-my-zsh related tasks
       - import_tasks: tasks/install/omz.yml

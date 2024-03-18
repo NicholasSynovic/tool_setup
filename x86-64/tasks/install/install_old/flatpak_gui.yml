@@ -1,6 +1,0 @@
-
-- name: "Install GUI software from Flatpak"
-  become: true
-  community.general.flatpak:
-    name: "{{ flatpakSoftware_GUI }}"
-    state: "present"
