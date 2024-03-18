@@ -17,11 +17,8 @@ updateSystem:
 	sudo apt autoremove --purge -y
 	sudo snap refresh
 
-installLinuxLaptopCommandLine:
-	/usr/bin/python3 -m ansible playbook test.yml --ask-become-pass -e "enable_gui=false"
-
-installLinuxLaptopGUI:
-	/usr/bin/python3 -m ansible playbook test.yml --ask-become-pass -e "enable_gui=true"
+install:
+	/usr/bin/python3 -m ansible playbook install.yml --ask-become-pass -e "enable_gui=true"
 
 runAnsible:
 	/usr/bin/python3 -m ansible playbook install_playbook.yml --ask-become-pass

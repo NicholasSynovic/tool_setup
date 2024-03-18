@@ -1,0 +1,29 @@
+- name: "Install SDKMan Software"
+  become: false
+  shell:
+    cmd: "source /home/{{ currentUser.stdout }}/.bashrc && sdk install kotlin sbt scala schemacrawler "
+    executable: "/bin/bash"
+
+- name: "Install JDK 8"
+  become: false
+  shell:
+    cmd: "source /home/{{ currentUser.stdout }}/.bashrc && sdk install java 8.0.402-tem"
+    executable: "/bin/bash"
+
+- name: "Install JDK 11"
+  become: false
+  shell:
+    cmd: "source /home/{{ currentUser.stdout }}/.bashrc && sdk install java 11.0.22-tem"
+    executable: "/bin/bash"
+
+- name: "Install JDK 17"
+  become: false
+  shell:
+    cmd: "source /home/{{ currentUser.stdout }}/.bashrc && sdk install java 17.0.10-tem"
+    executable: "/bin/bash"
+
+- name: "Install JDK 21"
+  become: false
+  shell:
+    cmd: "source /home/{{ currentUser.stdout }}/.bashrc && sdk install java 21.0.2-tem"
+    executable: "/bin/bash"

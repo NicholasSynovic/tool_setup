@@ -1,0 +1,6 @@
+# Install Oh My ZSH (OMZ)
+
+- name: "Set ZSH as shell"
+  become: false
+  shell:
+    cmd: "chsh -s /bin/zsh"

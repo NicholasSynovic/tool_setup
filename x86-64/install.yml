@@ -29,8 +29,8 @@
       - import_tasks: tasks/install/install_Snap.yml
 
       # Install Alire
-      - import_tasks: tasks/install/install_Alire.yml
-      - import_tasks: tasks/install/alire.yml
+      - import_tasks: tasks/install/alire/install_Alire.yml
+      - import_tasks: tasks/install/alire/alire.yml
 
       # Install ASDF
       - import_tasks: tasks/install/install_ASDF.yml
@@ -60,7 +60,7 @@
       - import_tasks: tasks/install/install_VLang.yml
       
       # Install Juliaup
-      - import_tasks: tasks/install//install_Juliaup.yml
+      - import_tasks: tasks/install/install_Juliaup.yml
       
       # Install Luaver
       - import_tasks: tasks/install/install_Luaver.yml
@@ -70,15 +70,16 @@
       
       # Install R-Rig
       - import_tasks: tasks/install/rrig/install_RRig.yml
+      - import_tasks: tasks/install/rrig/rrig.yml
 
       # Install SDKMan Software
       - import_tasks: tasks/install/sdkman/install_SDKMan.yml
       - import_tasks: tasks/install/sdkman/sdkman.yml
 
       # Install Vimplug Software
-      - import_tasks: tasks/install/vimplug/install_Vimplug.yml
-      - import_tasks: tasks/install/vimplug/vimplug.yml
+      - import_tasks: tasks/install/vimplug/install_VimPlug.yml
+      # - import_tasks: tasks/install/vimplug/vimplug.yml
 
       # Install OMZ
-      - import_tasks: tasks/install/omz/install_Omz.yml
+      - import_tasks: tasks/install/omz/install_OMZ.yml
       - import_tasks: tasks/install/omz/omz.yml
