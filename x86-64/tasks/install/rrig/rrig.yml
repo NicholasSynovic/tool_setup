@@ -1,5 +1,3 @@
-# Install r-rig
-
 - name: "Install latest R release"
   become: true
   shell:

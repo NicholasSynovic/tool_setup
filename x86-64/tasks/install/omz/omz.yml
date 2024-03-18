@@ -1,6 +1,6 @@
 # Install Oh My ZSH (OMZ)
 
 - name: "Set ZSH as shell"
-  become: false
+  become: true
   shell:
-    cmd: "chsh -s /bin/zsh"
+    cmd: "chsh -R /home/{{ currentUser.stdout }} -s /bin/zsh"

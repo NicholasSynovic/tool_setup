@@ -14,7 +14,7 @@
       # Install APT Software
       - import_tasks: tasks/configure/configure_APT.yml
       - import_tasks: tasks/update/update_APT.yml
-      - import_tasks: tasks/upgrade/upgrade_APT.yml
+      # - import_tasks: tasks/upgrade/upgrade_APT.yml
       - import_tasks: tasks/install/apt/apt.yml
       - import_tasks: tasks/install/apt/apt_Intel.yml
       - import_tasks: tasks/install/apt/apt_Microsoft.yml
@@ -70,7 +70,7 @@
       
       # Install R-Rig
       - import_tasks: tasks/install/rrig/install_RRig.yml
-      - import_tasks: tasks/install/rrig/rrig.yml
+      # - import_tasks: tasks/install/rrig/rrig.yml
 
       # Install SDKMan Software
       - import_tasks: tasks/install/sdkman/install_SDKMan.yml
@@ -82,4 +82,4 @@
 
       # Install OMZ
       - import_tasks: tasks/install/omz/install_OMZ.yml
-      - import_tasks: tasks/install/omz/omz.yml
+      # - import_tasks: tasks/install/omz/omz.yml

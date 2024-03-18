@@ -23,4 +23,4 @@
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}/.temp"
-    cmd: "mv v /home/{{ currentUser.stdout }}/.local/bin/v"
+    cmd: "mv -f v/v /home/{{ currentUser.stdout }}/.local/bin/v"

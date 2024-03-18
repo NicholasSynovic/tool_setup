@@ -6,15 +6,18 @@
     dest: "/home/{{ currentUser.stdout }}/.temp/rustupInstaller.sh"
     mode: "+x"
     url: "https://sh.rustup.rs"
+  when: "not rustupDir.stat.exists"
 
 - name: "Install rustup"
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}/.temp"
     cmd: "./rustupInstaller.sh -y --no-modify-path"
+  when: "not rustupDir.stat.exists"
 
 - name: "Move cargo"
   become: false
   shell:
     chdir: "/home/{{ currentUser.stdout }}"
-    cmd: "mv .cargo /home/{{ currentUser.stdout }}/.local/bin/cargo"
+    cmd: "mv -f .cargo /home/{{ currentUser.stdout }}/.local/bin/cargo"
+  when: "not rustupDir.stat.exists"
