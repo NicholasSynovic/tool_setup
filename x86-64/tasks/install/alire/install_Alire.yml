@@ -5,6 +5,7 @@
   get_url:
     dest: "/home/{{ currentUser.stdout }}/.temp/alire.zip"
     url: "https://github.com/alire-project/alire/releases/download/v1.2.2/alr-1.2.2-bin-x86_64-linux.zip"
+  when: "not alireExecutable.stat.exists"
 
 - name: "Decompress Alire"
   become: false
@@ -12,13 +13,4 @@
     copy: false
     dest: "/home/{{ currentUser.stdout }}/.local"
     src: "/home/{{ currentUser.stdout }}/.temp/alire.zip"
-    
-- name: "Install GNAT"
-  become: false
-  shell:
-    cmd: "{{ alireExecutable.stat.path }} toolchain --install gnat"
-
-- name: "Install gprbuild"
-  become: false
-  shell:
-    cmd: "{{ alireExecutable.stat.path }} toolchain --install gprbuild"
+  when: "not alireExecutable.stat.exists"

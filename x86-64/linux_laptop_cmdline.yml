@@ -25,15 +25,12 @@
       # Install Linuxbrew Software
       - import_tasks: tasks/install/install_Linuxbrew.yml
 
-      # Install Flatpak Software
-      - import_tasks: tasks/configure/configure_Flatpak.yml
-      - import_tasks: tasks/install/install_Flatpak.yml
-      
       # Install Snap Software
       - import_tasks: tasks/install/install_Snap.yml
 
       # Install Alire
       - import_tasks: tasks/install/install_Alire.yml
+      - import_tasks: tasks/install/alire.yml
 
       # Install ASDF
       - import_tasks: tasks/install/install_ASDF.yml
@@ -43,22 +40,45 @@
       
       # Install Docker
       - import_tasks: tasks/install/install_Docker.yml
+      
+      # Install Elm
+      - import_tasks: tasks/install/install_Elm.yml
+      
+      # Install Flatpak Software
+      - import_tasks: tasks/install/install_Flatpak.yml
 
-      # ZSH oh-my-zsh related tasks
-      - import_tasks: tasks/install/omz.yml
-        when:
-          "not omzDir.stat.exists"
+      # Install FreeBasic Compiler
+      - import_tasks: tasks/install/install_FreeBasicCompiler.yml
+      
+      # Install Rustup
+      - import_tasks: tasks/install/install_Rustup.yml
+      
+      # Install Tiny C Compiler
+      - import_tasks: tasks/install/install_TinyCCompiler.yml
+      
+      # Install V Lang
+      - import_tasks: tasks/install/install_VLang.yml
+      
+      # Install Juliaup
+      - import_tasks: tasks/install//install_Juliaup.yml
+      
+      # Install Luaver
+      - import_tasks: tasks/install/install_Luaver.yml
+      
+      # Install NVM
+      - import_tasks: tasks/install/install_NVM.yml
+      
+      # Install R-Rig
+      - import_tasks: tasks/install/rrig/install_RRig.yml
 
-      # JVM SDKMan related tasks
-      - import_tasks: tasks/install/sdkman.yml
-        when:
-      # Vim vim-plug related tasks
-      - import_tasks: tasks/install/vimplug.yml
-        when:
-          "not vimplugExecutable.stat.exists"
+      # Install SDKMan Software
+      - import_tasks: tasks/install/sdkman/install_SDKMan.yml
+      - import_tasks: tasks/install/sdkman/sdkman.yml
 
-      # Docker related tasks
-      - import_tasks: tasks/install/docker.yml
+      # Install Vimplug Software
+      - import_tasks: tasks/install/vimplug/install_Vimplug.yml
+      - import_tasks: tasks/install/vimplug/vimplug.yml
 
-      # Install bun
-      # Install Mojo
+      # Install OMZ
+      - import_tasks: tasks/install/omz/install_Omz.yml
+      - import_tasks: tasks/install/omz/omz.yml

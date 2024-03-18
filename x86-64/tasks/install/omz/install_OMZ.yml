@@ -5,3 +5,4 @@
   shell:
     chdir: "/home/{{ currentUser.stdout }}"
     cmd: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+  when: "not omzDir.stat.exists"

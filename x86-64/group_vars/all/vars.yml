@@ -138,6 +138,7 @@ brewSoftware:
 flatpakGUISoftware:
   - com.calibre_ebook.calibre
   - com.discordapp.Discord
+  - org.zotero.Zotero
 
 microsoftAPTSoftware:
   - dotnet-sdk-8.0
