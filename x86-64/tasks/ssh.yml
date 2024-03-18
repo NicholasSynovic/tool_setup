@@ -1,4 +1,0 @@
-- name: "Create SSH key"
-  become: false
-  shell:
-    cmd: "yes | ssh-keygen -b 3072 -t rsa -f /home/{{ currentUser.stdout }}/.ssh/id_rsa -q -N ''"
