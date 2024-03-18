@@ -147,9 +147,10 @@ racketAPTSoftware:
   - racket
 
 snapGUISoftware:
-  - slack
-  - postman
   - code
+  - postman
+  - slack
+  - sqlitebrowser
 
 swiAPTSoftware:
   - swi-prolog
