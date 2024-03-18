@@ -9,7 +9,7 @@
 
         # APT related tasks
       - import_tasks: tasks/configure/apt.yml
-      
+
         # Docker related tasks
       - import_tasks: tasks/install/docker.yml
       - import_tasks: tasks/install/portainer.yml

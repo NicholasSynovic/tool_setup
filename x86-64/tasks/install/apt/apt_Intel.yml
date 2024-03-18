@@ -2,4 +2,3 @@
   become: true
   shell:
     cmd: "apt install intel-aikit intel-basekit intel-hpckit -y"
-

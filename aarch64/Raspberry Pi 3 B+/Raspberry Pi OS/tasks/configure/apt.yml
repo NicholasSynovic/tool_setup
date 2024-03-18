@@ -1,4 +1,4 @@
-# Task to configure repos, update, upgrade, and autoremove software with APT 
+# Task to configure repos, update, upgrade, and autoremove software with APT
 
 - name: "Upgrade Packages"
   become: true

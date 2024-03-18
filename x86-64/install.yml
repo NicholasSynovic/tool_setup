@@ -34,40 +34,40 @@
 
       # Install ASDF
       - import_tasks: tasks/install/install_ASDF.yml
-      
+
       # Install ChooseNim
       - import_tasks: tasks/install/install_ChooseNim.yml
-      
+
       # Install Docker
       - import_tasks: tasks/install/install_Docker.yml
-      
+
       # Install Elm
       - import_tasks: tasks/install/install_Elm.yml
-      
+
       # Install Flatpak Software
       - import_tasks: tasks/install/install_Flatpak.yml
 
       # Install FreeBasic Compiler
       - import_tasks: tasks/install/install_FreeBasicCompiler.yml
-      
+
       # Install Rustup
       - import_tasks: tasks/install/install_Rustup.yml
-      
+
       # Install Tiny C Compiler
       - import_tasks: tasks/install/install_TinyCCompiler.yml
-      
+
       # Install V Lang
       - import_tasks: tasks/install/install_VLang.yml
-      
+
       # Install Juliaup
       - import_tasks: tasks/install/install_Juliaup.yml
-      
+
       # Install Luaver
       - import_tasks: tasks/install/install_Luaver.yml
-      
+
       # Install NVM
       - import_tasks: tasks/install/install_NVM.yml
-      
+
       # Install R-Rig
       - import_tasks: tasks/install/rrig/install_RRig.yml
       # - import_tasks: tasks/install/rrig/rrig.yml

@@ -55,7 +55,7 @@
 - name: "Set OMZ directory"
   stat:
     path: "/home/{{ currentUser.stdout }}/.oh-my-zsh"
-  register: omzDir 
+  register: omzDir
 
 - name: "Set rustup directory"
   stat:

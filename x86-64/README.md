@@ -6,7 +6,7 @@
 
 This directory contains ansible playbooks that can be executed to setup devices that utilize an x86-64 CPU architecture.
 
-Currently, the only tested and supported operating systems are for Ubuntu based operating systems. 
+Currently, the only tested and supported operating systems are for Ubuntu based operating systems.
 
 ## Supported Configurations
 
