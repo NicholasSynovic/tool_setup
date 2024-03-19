@@ -148,6 +148,7 @@ racketAPTSoftware:
 
 snapGUISoftware:
   - code
+  - gimp
   - postman
   - slack
   - sqlitebrowser
