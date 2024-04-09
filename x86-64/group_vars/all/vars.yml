@@ -138,6 +138,7 @@ brewSoftware:
 flatpakGUISoftware:
   - com.calibre_ebook.calibre
   - com.discordapp.Discord
+  - fr.handbrake.ghb
   - org.zotero.Zotero
 
 microsoftAPTSoftware:
