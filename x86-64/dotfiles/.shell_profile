@@ -4,16 +4,6 @@ export GPG_TTY=$(tty)
 # Enable Erlang kerl to build docs
 export KERL_BUILD_DOCS="yes"
 
-# If running bash, set bash specific variables
-if [ -n "$BASH_VERSION" ]; then
-    eval "$(rbenv init - bash)"
-fi
-
-# If running zsh, set bash specific variables
-if [ -n "$ZSH_VERSION" ]; then
-    eval "$(rbenv init - zsh)"
-fi
-
 # If .aliases found, source ~/.aliases
 if [ -f "$HOME/.aliases" ]; then
     . "$HOME/.aliases"
@@ -22,6 +12,16 @@ fi
 # If .pathConfig found, source ~/.pathConfig
 if [ -f "$HOME/.pathConfig" ]; then
     . "$HOME/.pathConfig"
+fi
+
+# If running bash, set bash specific variables
+if [ -n "$BASH_VERSION" ]; then
+    eval "$(rbenv init - bash)"
+fi
+
+# If running zsh, set bash specific variables
+if [ -n "$ZSH_VERSION" ]; then
+    eval "$(rbenv init - zsh)"
 fi
 
 # If sdkman is installed, source sdkman config
