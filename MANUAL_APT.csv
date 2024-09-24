@@ -93,3 +93,4 @@ unixodbc-dev,0,sudo apt install unixodbc-dev -y
 firefox,0,sudo apt install firefox -y
 gimp,0,sudo apt install gimp -y
 inkscape,0,sudo apt install inkscape -y
+libreoffice,0,sudo apt install libreoffice -y
